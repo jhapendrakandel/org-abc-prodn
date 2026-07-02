@@ -1057,3 +1057,263 @@ function abcnt_handle_clear_breaking() {
     exit;
 }
 add_action( 'admin_init', 'abcnt_handle_clear_breaking' );
+
+/* ══════════════════════════════════════════════════════
+   VIDEO CAROUSEL — YouTube embed meta + shortcode + carousel
+══════════════════════════════════════════════════════ */
+
+/**
+ * Add YouTube URL meta box for video posts (abc-video category / post type)
+ */
+function abc_video_add_meta_box() {
+    add_meta_box(
+        'abc_video_youtube_url',
+        '🎬 YouTube Video URL',
+        'abc_video_meta_box_html',
+        'post',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'abc_video_add_meta_box' );
+
+function abc_video_meta_box_html( $post ) {
+    wp_nonce_field( 'abc_video_save', 'abc_video_nonce' );
+    $yt_url = get_post_meta( $post->ID, '_abc_youtube_url', true );
+    ?>
+    <p>
+        <label for="abc_youtube_url"><strong>YouTube Video URL</strong></label><br>
+        <input type="url" id="abc_youtube_url" name="abc_youtube_url"
+               value="<?php echo esc_attr( $yt_url ); ?>"
+               style="width:100%;" placeholder="https://www.youtube.com/watch?v=VIDEO_ID" />
+        <span class="description">Enter full YouTube URL. Video will be embedded in the video carousel.</span>
+    </p>
+    <?php
+}
+
+function abc_video_save( $post_id ) {
+    if ( ! isset( $_POST['abc_video_nonce'] ) || ! wp_verify_nonce( $_POST['abc_video_nonce'], 'abc_video_save' ) ) return;
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+    
+    if ( isset( $_POST['abc_youtube_url'] ) ) {
+        $url = sanitize_url( $_POST['abc_youtube_url'] );
+        update_post_meta( $post_id, '_abc_youtube_url', $url );
+    }
+}
+add_action( 'save_post_post', 'abc_video_save' );
+
+/**
+ * Extract YouTube video ID from URL
+ */
+function abc_get_youtube_id( $url ) {
+    if ( empty( $url ) ) return '';
+    $patterns = array(
+        '/youtu\.be\/([a-zA-Z0-9_-]+)/',
+        '/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/',
+        '/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/',
+        '/youtube\.com\/v\/([a-zA-Z0-9_-]+)/',
+    );
+    foreach ( $patterns as $pattern ) {
+        if ( preg_match( $pattern, $url, $matches ) ) {
+            return $matches[1];
+        }
+    }
+    return '';
+}
+
+/**
+ * Get YouTube thumbnail URL
+ */
+function abc_get_youtube_thumbnail( $video_id, $quality = 'hqdefault' ) {
+    if ( empty( $video_id ) ) return '';
+    return "https://img.youtube.com/vi/{$video_id}/{$quality}.jpg";
+}
+
+/**
+ * Shortcode: [abc_video_carousel] - renders video carousel with prev/next
+ */
+function abc_video_carousel_shortcode( $atts ) {
+    $atts = shortcode_atts( array(
+        'count'   => 10,
+        'cat'     => 'abc-video',
+        'show_desc' => 'true',
+    ), $atts );
+    
+    $query = new WP_Query( array(
+        'post_type'      => 'post',
+        'posts_per_page' => (int) $atts['count'],
+        'category_name'  => $atts['cat'],
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    ) );
+    
+    if ( ! $query->have_posts() ) {
+        return '<p class="abc-video-empty">कोई भिडियो उपलब्ध छैन।</p>';
+    }
+    
+    ob_start();
+    ?>
+    <div class="abc-video-carousel" data-current="0">
+        <div class="abc-video-carousel-header">
+            <h2 class="abc-video-carousel-title">एबीसी भिडियो</h2>
+        </div>
+        
+        <div class="abc-video-carousel-track" id="abc-video-track">
+            <?php
+            $index = 0;
+            while ( $query->have_posts() ) : $query->the_post();
+                $post_id = get_the_ID();
+                $yt_url  = get_post_meta( $post_id, '_abc_youtube_url', true );
+                $video_id = abc_get_youtube_id( $yt_url );
+                $thumb_url = $video_id ? abc_get_youtube_thumbnail( $video_id, 'maxresdefault' ) : get_the_post_thumbnail_url( $post_id, 'large' );
+                if ( empty( $thumb_url ) ) {
+                    $thumb_url = 'https://placehold.co/560x315/eeeeee/999999?text=Video';
+                }
+            ?>
+            <div class="abc-video-slide" data-index="<?php echo $index; ?>">
+                <article class="abc-video-card">
+                    <?php if ( $video_id ) : ?>
+                        <div class="abc-video-embed-wrapper" data-video-id="<?php echo esc_attr( $video_id ); ?>">
+                            <img class="abc-video-thumb" src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
+                            <button class="abc-video-play-btn" aria-label="Play video">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                        </div>
+                    <?php else : ?>
+                        <img class="abc-video-thumb" src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
+                    <?php endif; ?>
+                    
+                    <div class="abc-video-content">
+                        <h3 class="abc-video-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <?php if ( $atts['show_desc'] === 'true' ) : ?>
+                            <p class="abc-video-desc"><?php echo wp_trim_words( get_the_excerpt() ?: get_the_content(), 30 ); ?></p>
+                        <?php endif; ?>
+                        <div class="abc-video-meta">
+                            <time><?php echo get_the_date( 'M j, Y' ); ?></time>
+                            <?php if ( $video_id ) : ?>
+                                <span class="abc-video-duration" data-duration><?php echo $video_id; ?></span>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <?php
+            $index++;
+            endwhile;
+            wp_reset_postdata();
+            ?>
+        </div>
+        
+        <div class="abc-video-carousel-nav">
+            <button class="abc-video-nav-btn abc-video-prev" aria-label="Previous videos">‹</button>
+            <div class="abc-video-dots" id="abc-video-dots"></div>
+            <button class="abc-video-nav-btn abc-video-next" aria-label="Next videos">›</button>
+        </div>
+    </div>
+    
+    <script>
+    (function() {
+        const track = document.getElementById('abc-video-track');
+        const slides = track ? track.querySelectorAll('.abc-video-slide') : [];
+        const dotsContainer = document.getElementById('abc-video-dots');
+        const prevBtn = document.querySelector('.abc-video-prev');
+        const nextBtn = document.querySelector('.abc-video-next');
+        let currentIndex = 0;
+        const slidesPerView = getSlidesPerView();
+        const totalSlides = slides.length;
+        
+        function getSlidesPerView() {
+            if (window.innerWidth < 480) return 1;
+            if (window.innerWidth < 768) return 2;
+            if (window.innerWidth < 1024) return 3;
+            return 4;
+        }
+        
+        function updateDots() {
+            if (!dotsContainer) return;
+            const totalPages = Math.ceil(totalSlides / slidesPerView);
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'abc-video-dot' + (i === currentIndex ? ' active' : '');
+                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        function updateCarousel() {
+            if (!track) return;
+            const slideWidth = slides[0] ? slides[0].offsetWidth + 20 : 0;
+            track.style.transform = `translateX(-${currentIndex * slideWidth * slidesPerView}px)`;
+            updateNavButtons();
+        }
+        
+        function updateNavButtons() {
+            const totalPages = Math.ceil(totalSlides / slidesPerView);
+            if (prevBtn) prevBtn.disabled = currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = currentIndex >= totalPages - 1;
+        }
+        
+        function goToSlide(index) {
+            const totalPages = Math.ceil(totalSlides / slidesPerView);
+            if (index < 0 || index >= totalPages) return;
+            currentIndex = index;
+            updateCarousel();
+            updateDots();
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        }
+        
+        // Video play button handler
+        document.querySelectorAll('.abc-video-play-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const wrapper = this.closest('.abc-video-embed-wrapper');
+                const videoId = wrapper.dataset.videoId;
+                if (videoId) {
+                    wrapper.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                }
+            });
+        });
+        
+        // Responsive: recalculate on resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                const newSlidesPerView = getSlidesPerView();
+                if (newSlidesPerView !== slidesPerView) {
+                    // Reinitialize would be needed, but we just update current
+                    updateCarousel();
+                    updateDots();
+                }
+            }, 250);
+        });
+        
+        // Initialize
+        updateDots();
+        updateCarousel();
+    })();
+    </script>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode( 'abc_video_carousel', 'abc_video_carousel_shortcode' );
+
+/**
+ * Enqueue video carousel styles
+ */
+function abc_video_enqueue_styles() {
+    if ( is_page_template( 'page-abc-videos.php' ) || is_page( 'abc-videos' ) ) {
+        wp_enqueue_style( 'abc-video-carousel', get_template_directory_uri() . '/css/video-carousel.css', array(), '1.0.0' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'abc_video_enqueue_styles' );

@@ -1,0 +1,317 @@
+/* ================================================
+   VIDEO CAROUSEL STYLES
+   For: page-abc-videos.php, [abc_video_carousel] shortcode
+================================================ */
+
+/* ── Container ── */
+.abc-video-carousel {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 16px;
+    font-family: "Noto Sans Devanagari", system-ui, sans-serif;
+}
+
+.abc-video-carousel-header {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-secondary, #b80000);
+}
+
+.abc-video-carousel-title {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    color: var(--color-primary, #0a1633);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.abc-video-carousel-title::before {
+    content: '🎬';
+    font-size: 1.2em;
+}
+
+/* ── Track & Slides ── */
+.abc-video-carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 4px 20px;
+    margin: 0 -4px;
+}
+
+.abc-video-slide {
+    flex: 0 0 calc(25% - 15px); /* 4 per view on desktop */
+    min-width: 280px;
+    transition: transform 0.4s ease;
+}
+
+@media (max-width: 1024px) {
+    .abc-video-slide {
+        flex: 0 0 calc(33.333% - 14px); /* 3 per view */
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .abc-video-slide {
+        flex: 0 0 calc(50% - 10px); /* 2 per view */
+        min-width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .abc-video-slide {
+        flex: 0 0 100%; /* 1 per view */
+        min-width: 280px;
+    }
+}
+
+/* ── Video Card ── */
+.abc-video-card {
+    background: var(--color-surface, #fff);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(10, 22, 51, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.abc-video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(184, 0, 0, 0.15);
+}
+
+/* ── Video Embed Wrapper ── */
+.abc-video-embed-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+}
+
+.abc-video-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.abc-video-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.abc-video-card:hover .abc-video-thumb {
+    transform: scale(1.05);
+}
+
+/* ── Play Button ── */
+.abc-video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: rgba(184, 0, 0, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.abc-video-embed-wrapper:hover .abc-video-play-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.abc-video-play-btn:hover {
+    background: #b80000;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.abc-video-play-btn:focus-visible {
+    outline: 3px solid var(--color-accent, #ffcc00);
+    outline-offset: 3px;
+}
+
+/* ── Video Content ── */
+.abc-video-content {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.abc-video-title {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--color-primary, #0a1633);
+    margin: 0 0 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.abc-video-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.abc-video-title a:hover {
+    color: var(--color-secondary, #b80000);
+}
+
+.abc-video-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-muted, #4b5563);
+    margin: 0 0 12px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.abc-video-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    font-size: 12px;
+    color: var(--color-muted, #4b5563);
+}
+
+.abc-video-meta time {
+    font-weight: 600;
+}
+
+.abc-video-duration {
+    background: var(--color-secondary, #b80000);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+/* ── Navigation ── */
+.abc-video-carousel-nav {
+    display: flex;
+    : flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+}
+
+.abc-video-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-primary, #0a1633);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(10, 22, 51, 0.2);
+}
+
+.abc-video-nav-btn:hover:not(:disabled) {
+    background: var(--color-secondary, #b80000);
+    transform: scale(1.05);
+}
+
+.abc-video-nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.abc-video-nav-btn:focus-visible {
+    outline: 3px solid var(--color-accent, #ffcc00);
+    outline-offset: 2px;
+}
+
+/* ── Dots ── */
+.abc-video-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.abc-video-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-border, #e5e7eb);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.abc-video-dot:hover {
+    background: var(--color-secondary, #b80000);
+    transform: scale(1.2);
+}
+
+.abc-video-dot.active {
+    background: var(--color-secondary, #b80000);
+    transform: scale(1.3);
+}
+
+/* ── Empty State ── */
+.abc-video-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-muted, #4b5563);
+    font-size: 16px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+    .abc-video-carousel {
+        padding: 16px 12px;
+    }
+    
+    .abc-video-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .abc-video-dots {
+        gap: 6px;
+    }
+    
+    .abc-video-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

@@ -1,8 +1,9 @@
 <?php
 get_header();
+?>
 
+<div class="container abc-videos-page">
+    <?php echo do_shortcode( '[abc_video_carousel count="10" cat="abc-video" show_desc="true"]' ); ?>
+</div>
 
-abcnepal_render_news_section('abc_video');
-
-get_footer();
-
+<?php get_footer(); ?>

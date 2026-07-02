@@ -1691,11 +1691,16 @@ nyt_render_intl_split( array(
     'featured_count'=> 2,   // 2 featured stories (left 30% + center 30%)
     'bullet_count'  => 5,   // 5 headline bullets (right 40%)
 ) );
-nyt_render_band( array(
-'label' => 'ABC TV PROGRAMS',
-'cat'   => 'abc-video',
-'link'  => home_url( '/abc-videos/' ),
-) );
+// ── ABC TV PROGRAMS: Video Carousel instead of regular band ──
+if ( function_exists( 'abc_video_carousel_shortcode' ) ) {
+    echo do_shortcode( '[abc_video_carousel count="10" cat="abc-video" show_desc="true"]' );
+} else {
+    nyt_render_band( array(
+        'label' => 'ABC TV PROGRAMS',
+        'cat'   => 'abc-video',
+        'link'  => home_url( '/abc-videos/' ),
+    ) );
+}
 nyt_render_band( array(
 'label' => 'खेलकुद',
 'cat'   => 'sports',
