@@ -889,7 +889,7 @@ add_action('wp_ajax_nopriv_get_live_updates', 'abcnepal_get_live_updates');
 
 /* ================================================
    USED BY: Global (all pages) - wp_enqueue_scripts
-   PURPOSE: Enqueue header-nav.css and header-nav.js for navigation/ticker
+   PURPOSE: Enqueue header-nav.css, header-nav.js, date-bar.css, ticker-marquee.js for navigation/ticker
    ================================================ */
 function abc_enqueue_header_assets() {
     wp_enqueue_style(
@@ -897,10 +897,21 @@ function abc_enqueue_header_assets() {
         get_template_directory_uri() . '/header-nav.css',
         array(), '1.0.0'
     );
+    wp_enqueue_style(
+        'abc-date-bar',
+        get_template_directory_uri() . '/css/date-bar.css',
+        array('abc-header-nav'), '1.0.0'
+    );
     wp_enqueue_script(
         'abc-header-nav',
         get_template_directory_uri() . '/header-nav.js',
         array(), '1.0.0',
+        true
+    );
+    wp_enqueue_script(
+        'abc-ticker-marquee',
+        get_template_directory_uri() . '/js/ticker-marquee.js',
+        array('abc-header-nav'), '1.0.0',
         true
     );
 }
