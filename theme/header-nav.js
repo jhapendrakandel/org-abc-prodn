@@ -124,6 +124,54 @@
                 }
             }, { passive: true });
         }
+
+        /* ── Province Tab Switching ── */
+        var provinceTabs = document.querySelectorAll('.nyt-ptab');
+        if (provinceTabs.length) {
+            provinceTabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var key = this.getAttribute('data-ptab');
+                    var section = this.closest('.nyt-province-section');
+                    if (!section) return;
+                    
+                    // Update tabs
+                    section.querySelectorAll('.nyt-ptab').forEach(function (t) {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    
+                    // Update panels
+                    section.querySelectorAll('.nyt-province-panel').forEach(function (panel) {
+                        panel.classList.remove('active');
+                        panel.setAttribute('aria-hidden', 'true');
+                    });
+                    var activePanel = section.querySelector('.nyt-province-panel[data-ptab="' + key + '"]');
+                    if (activePanel) {
+                        activePanel.classList.add('active');
+                        activePanel.setAttribute('aria-hidden', 'false');
+                    }
+                });
+                
+                // Keyboard navigation for tabs
+                provinceTabs.forEach(function (tab) {
+                    tab.addEventListener('keydown', function (e) {
+                        var tabs = Array.from(provinceTabs);
+                        var index = tabs.indexOf(this);
+                        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                            e.preventDefault();
+                            var next = tabs[(index + 1) % tabs.length];
+                            next.focus();
+                        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                            e.preventDefault();
+                            var prev = tabs[(index - 1 + tabs.length) % tabs.length];
+                            prev.focus();
+                        }
+                    });
+                });
+            });
+        }
     });
 
 })();
