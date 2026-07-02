@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+<title>ABC Nepal TV</title>
+<link>http://localhost:8080</link>
+<description>ABC Nepal TV News</description>
+<wp:wxr_version>1.2</wp:wxr_version>
+<wp:base_site_url>http://localhost:8080</wp:base_site_url>
+<wp:base_blog_url>http://localhost:8080</wp:base_blog_url>
+
+<!-- ===================== CATEGORIES ===================== -->
+<wp:category><wp:term_id>1</wp:term_id><wp:category_nicename>news</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[मुख्य समाचार]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>2</wp:term_id><wp:category_nicename>politics</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[राजनीति]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>3</wp:term_id><wp:category_nicename>artha</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[अर्थ]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>4</wp:term_id><wp:category_nicename>economics</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[अर्थतन्त्र]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>5</wp:term_id><wp:category_nicename>abc-video</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[एबीसी भिडियो]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>6</wp:term_id><wp:category_nicename>kutniti</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[कूटनीति]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>7</wp:term_id><wp:category_nicename>sports</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[खेलकुद]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>8</wp:term_id><wp:category_nicename>province</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[प्रदेश]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>9</wp:term_id><wp:category_nicename>provincial_karnali</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[कर्णाली]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>10</wp:term_id><wp:category_nicename>provincial_koshi</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[कोशी]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>11</wp:term_id><wp:category_nicename>provincial_gandaki</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[गण्डकी]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>12</wp:term_id><wp:category_nicename>provincial_bagmati</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[बागमती]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>13</wp:term_id><wp:category_nicename>provincial_madesh</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[मधेश]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>14</wp:term_id><wp:category_nicename>provincial_lumbini</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[लुम्बिनी]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>15</wp:term_id><wp:category_nicename>provincial_sudurpashchim</wp:category_nicename><wp:category_parent>province</wp:category_parent><wp:cat_name><![CDATA[सुदूरपश्चिम]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>16</wp:term_id><wp:category_nicename>breaking</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[ब्रेकिङ]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>17</wp:term_id><wp:category_nicename>entertainment</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[मनोरञ्जन]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>18</wp:term_id><wp:category_nicename>opinion</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[विचार]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>19</wp:term_id><wp:category_nicename>international</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[अन्तर्राष्ट्रिय]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>20</wp:term_id><wp:category_nicename>english</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[English]]></wp:cat_name></wp:category>
+<wp:category><wp:term_id>21</wp:term_id><wp:category_nicename>business</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[व्यापार]]></wp:cat_name></wp:category>
+
+<!-- ===================== मुख्य समाचार (news) ===================== -->
+
+<item>
+<title><![CDATA[काठमाडौंमा विशाल आगलागीले सयौं घर नष्ट, राहत कार्य जारी]]></title>
+<link>http://localhost:8080/kathmandu-fire-destroys-hundreds-of-homes/</link>
+<pubDate>Mon, 02 Jun 2025 08:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="news"><![CDATA[मुख्य समाचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/301/800/450" alt="काठमाडौंमा विशाल आगलागीले सयौं घर नष्ट" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>काठमाडौंको पुरानो बस्तीमा बुधबार राति लागेको आगलागीले सयौं परिवारको घरगर्हस्थी स्वाहा पारेको छ। दमकल विभागका अनुसार, आगो नियन्त्रण गर्न चार घण्टाभन्दा बढी समय लागेको थियो। घटनामा परेका ३५० भन्दा बढी परिवारलाई नजिकैका विद्यालय र सामुदायिक भवनमा अस्थायी आश्रय दिइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रधानमन्त्रीले घटनास्थलमा पुगेर पीडित परिवारहरूलाई तत्काल राहत उपलब्ध गराउने आश्वासन दिएका छन्। गृह मन्त्रालयले प्रत्येक पीडित परिवारलाई एक लाख रुपैयाँ आपतकालीन सहायता दिने घोषणा गरेको छ। नेपाल रेडक्रस सोसाइटी र विभिन्न गैरसरकारी संस्थाहरूले राहत वितरण शुरु गरिसकेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>आगलागीको कारण अनुसन्धान गर्न विशेष टोली गठन गरिएको छ। प्रारम्भिक अनुसन्धानले विद्युत्को सर्टसर्किटलाई मुख्य कारण देखाएको छ। बस्तीमा घरहरू एकदमै नजिक-नजिक भएकाले आगो छिटो फैलिएको जनाइएको छ। भविष्यमा यस्तो घटना नदोहोरियोस् भनेर नगरपालिकाले पुरानो बस्तीको नक्सा पुनर्निर्माण गर्ने योजना बनाइरहेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>स्थानीय सांसदहरूले पीडितको पुनर्स्थापनाका लागि विशेष बजेट माग गरेका छन् भने सत्तारुढ दलभित्रै पनि यस विषयमा गम्भीर छलफल भइरहेको बताइएको छ। राजधानीको जनसंख्या वृद्धि र अव्यवस्थित बसोबासले यस्ता जोखिम बढाइरहेको विज्ञहरूको निष्कर्ष छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[काठमाडौंको पुरानो बस्तीमा बुधबार राति लागेको आगलागीले सयौं परिवारको घरगर्हस्थी स्वाहा पारेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[kathmandu-fire-destroys-hundreds-of-homes]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-02 08:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-02 08:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपालमा डेंगी महामारीको जोखिम — स्वास्थ्य मन्त्रालयको अलर्ट]]></title>
+<link>http://localhost:8080/dengue-epidemic-risk-nepal-health-alert/</link>
+<pubDate>Tue, 03 Jun 2025 10:30:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="news"><![CDATA[मुख्य समाचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/302/800/450" alt="नेपालमा डेंगी महामारीको जोखिम" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>स्वास्थ्य तथा जनसंख्या मन्त्रालयले देशभर डेंगी ज्वरोको सङ्क्रमण तीव्र गतिमा फैलिरहेको भन्दै उच्च सतर्कता अपनाउन आग्रह गरेको छ। यस वर्ष मात्र देशभर ४ हजारभन्दा बढी डेंगी सङ्क्रमित भेटिएका छन् र यो संख्या दैनिक रूपमा बढिरहेको छ। मध्यपहाडी र तराई क्षेत्रमा बढी प्रकोप देखिएको स्वास्थ्य मन्त्रालयले जनाएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>स्वास्थ्य विशेषज्ञहरूका अनुसार, मनसुनको वर्षाले खाडल र जमेको पानीमा लामखुट्टेको प्रजनन बढाएको हुँदा डेंगी फैलिने जोखिम अत्यधिक छ। घर वरपर पानी जम्न नदिन, सुत्दा मच्छरदानी प्रयोग गर्न र शरीर ढाक्ने लुगा लगाउन मन्त्रालयले आग्रह गरेको छ। अस्पतालहरूमा बेड र रक्त परीक्षणको व्यवस्था मजबुत पारिएको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>काठमाडौं, ललितपुर र भक्तपुरका अस्पतालमा डेंगी रोगीको चाप बढेको छ। वीर अस्पतालका प्रमुखले अहिले दैनिक ७०-८० जना डेंगी शंकास्पद बिरामी आउने गरेको जानकारी दिए। सरकारले प्रभावित जिल्लाहरूमा थप स्वास्थ्यकर्मी र औषधि खटाएको छ। सामुदायिक स्तरमा सफाइ अभियान सञ्चालन गरिने योजना पनि रहेको जनाइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>विश्व स्वास्थ्य संगठनको नेपाल कार्यालयले पनि नेपाल सरकारलाई प्राविधिक सहयोग दिने प्रतिबद्धता जनाएको छ। नागरिकहरूलाई लक्षण देखिएमा तत्काल नजिकको स्वास्थ्य केन्द्र जान अनुरोध गरिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[स्वास्थ्य तथा जनसंख्या मन्त्रालयले देशभर डेंगी ज्वरोको सङ्क्रमण तीव्र गतिमा फैलिरहेको भन्दै उच्च सतर्कता अपनाउन आग्रह गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[dengue-epidemic-risk-nepal-health-alert]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-03 10:30:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-03 10:30:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[देशभर भारी वर्षाको चेतावनी — ३ प्रदेशमा रातो अलर्ट]]></title>
+<link>http://localhost:8080/heavy-rainfall-warning-three-provinces-red-alert/</link>
+<pubDate>Wed, 04 Jun 2025 06:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="news"><![CDATA[मुख्य समाचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/303/800/450" alt="देशभर भारी वर्षाको चेतावनी" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>जलवायु विभागले आगामी ७२ घण्टामा देशका तीन प्रदेशमा अत्यधिक वर्षाको सम्भावना देखिएको भन्दै रातो अलर्ट जारी गरेको छ। लुम्बिनी, मधेश र सुदूरपश्चिम प्रदेशका नदी किनार क्षेत्रमा बाढी र पहिरोको उच्च जोखिम रहेको मौसम पूर्वानुमान शाखाले जनाएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रमुख नदीहरू कर्णाली, राप्ती, र नारायणीमा पानीको सतह बिपद् जोखिम सीमाभन्दा माथि पुगिसकेको छ। तटीय जिल्लाहरूका जिल्ला प्रशासन कार्यालयहरूले सुरक्षित स्थानमा जान स्थानीयलाई निर्देशन दिएका छन्। सेना र सशस्त्र प्रहरी बल उद्धारका लागि तयारी अवस्थामा राखिएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>गत वर्षको बाढीमा यी प्रदेशमा ठूलो जनधन क्षति भएको थियो। यस पटक सरकारले पूर्वतयारीमा विशेष ध्यान दिएको बताइएको छ। प्रत्येक जिल्लामा आपतकालीन नियन्त्रण कक्ष सञ्चालन गरिएको छ र राहत सामग्री पूर्व भण्डारण गरिएको छ। नागरिकहरूलाई अनावश्यक यात्रा नगर्न तथा नदी छेउ नजान चेतावनी दिइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>विकास निर्माणका काम तत्काल रोकिनेछन् भने विद्यालयहरू तीन दिनका लागि बन्द गरिनेछ। स्थानीय सरकारहरूले आफ्नो क्षेत्रमा संकट व्यवस्थापन टोली परिचालन गरेका छन्। जलवायु विशेषज्ञहरूले यो प्रकारको अति वर्षा जलवायु परिवर्तनको प्रत्यक्ष नतिजा भएको बताएका छन्।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[जलवायु विभागले आगामी ७२ घण्टामा देशका तीन प्रदेशमा अत्यधिक वर्षाको सम्भावना देखिएको भन्दै रातो अलर्ट जारी गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[heavy-rainfall-warning-three-provinces-red-alert]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-04 06:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-04 06:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपाल सरकारले राष्ट्रिय डिजिटल परिचयपत्र वितरण शुरु गर्यो]]></title>
+<link>http://localhost:8080/nepal-national-digital-id-distribution-begins/</link>
+<pubDate>Thu, 05 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="news"><![CDATA[मुख्य समाचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/304/800/450" alt="नेपाल सरकारले राष्ट्रिय डिजिटल परिचयपत्र वितरण शुरु गर्यो" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाल सरकारले दीर्घ प्रतीक्षित राष्ट्रिय डिजिटल परिचयपत्र (Digital National ID) वितरणको औपचारिक शुभारम्भ गरेको छ। गृह मन्त्रालयका अनुसार, पहिलो चरणमा काठमाडौं उपत्यकाका नागरिकहरूले यो परिचयपत्र पाउनेछन् र अर्को वर्षसम्म देशभर विस्तार गरिनेछ। परिचयपत्रमा बायोमेट्रिक तथ्यांक, क्यूआर कोड र राष्ट्रिय पहिचान नम्बर समावेश हुनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>यो परिचयपत्रले नागरिकहरूलाई सरकारी सेवाहरू अनलाइन माध्यमबाट सहज रूपमा प्राप्त गर्न, बैंकिङ कारोबार गर्न र विभिन्न प्रयोजनका लागि आफ्नो पहिचान प्रमाणित गर्न सक्षम बनाउनेछ। सरकारले यसलाई डिजिटल नेपाल फ्रेमवर्कको मुख्य आधार स्तम्भका रूपमा लिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सूचना प्रविधि विशेषज्ञहरूले यो कदमलाई सकारात्मक मानेका छन् तर डेटा सुरक्षा र गोपनीयतामा पर्याप्त ध्यान दिनुपर्ने आवश्यकता औँल्याएका छन्। नागरिक स्वतन्त्रताका हकमा काम गर्ने संस्थाहरूले परिचयपत्र प्रणालीमा पारदर्शिता र जवाफदेहिता सुनिश्चित गर्न माग गरेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>गृह सचिवका अनुसार, परिचयपत्र बनाउन नागरिकले नजिकको जिल्ला प्रशासन कार्यालयमा जानुपर्नेछ। शुरुको चरणमा नि:शुल्क वितरण गरिनेछ। अपाङ्गता भएका व्यक्ति र जेष्ठ नागरिकका लागि घरमै परिचयपत्र बनाउने व्यवस्था मिलाइने बताइएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाल सरकारले दीर्घ प्रतीक्षित राष्ट्रिय डिजिटल परिचयपत्र वितरणको औपचारिक शुभारम्भ गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-national-digital-id-distribution-begins]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-05 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-05 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== राजनीति (politics) ===================== -->
+
+<item>
+<title><![CDATA[प्रधानमन्त्रीविरुद्ध संसदमा महाभियोग प्रस्ताव दर्ता]]></title>
+<link>http://localhost:8080/impeachment-motion-registered-against-pm/</link>
+<pubDate>Fri, 06 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="politics"><![CDATA[राजनीति]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/305/800/450" alt="महाभियोग प्रस्ताव दर्ता" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>प्रमुख विपक्षी दलहरूले प्रधानमन्त्रीविरुद्ध संसदमा महाभियोग प्रस्ताव दर्ता गरेका छन्। ४७ जना सांसदहरूको हस्ताक्षर सहित दर्ता भएको यो प्रस्तावमा प्रधानमन्त्रीमाथि संविधान उल्लंघन, भ्रष्टाचार संरक्षण र सरकारी स्रोतको दुरुपयोगका आरोप लगाइएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>संसद् सचिवालयले प्रस्ताव दर्ता भएको पुष्टि गरेको छ। संवैधानिक प्रावधानअनुसार, यो प्रस्तावमाथि छलफलका लागि विशेष समिति गठन हुनेछ। समितिले ३० दिनभित्र प्रतिवेदन पेश गर्नुपर्नेछ। विशेषज्ञहरूले भने प्रस्ताव पास हुन दुई तिहाइ बहुमत आवश्यक पर्ने र सत्तारुढ गठबन्धनसँग त्यो संख्या नभएको स्पष्ट गरेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रधानमन्त्री कार्यालयले प्रस्तावलाई राजनीति प्रेरित र आधारहीन भनेर खारेज गरेको छ। प्रधानमन्त्रीको प्रवक्ताले भने — यो केवल विपक्षको सस्तो राजनीति हो, सरकार आफ्नो विकास कार्यमा अडिग छ। सत्तारुढ गठबन्धनका साझेदार दलहरूले पनि प्रस्तावको विरोध गरेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>राजनीतिक विश्लेषकहरूका अनुसार, यो घटनाले आगामी संसदीय सत्रलाई तातो बनाउनेछ। नागरिक समाजले भने उक्त आरोपहरूको निष्पक्ष अनुसन्धान हुनुपर्ने माग गरेका छन्। देशको राजनीतिक परिदृश्यमा थप अनिश्चितता बढेको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[प्रमुख विपक्षी दलहरूले प्रधानमन्त्रीविरुद्ध संसदमा महाभियोग प्रस्ताव दर्ता गरेका छन्।]]></excerpt:encoded>
+<wp:post_name><![CDATA[impeachment-motion-registered-against-pm]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-06 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-06 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नयाँ राजनीतिक दल दर्ताको लहर — निर्वाचन आयोग चिन्तित]]></title>
+<link>http://localhost:8080/new-political-party-registrations-surge-ec-concerned/</link>
+<pubDate>Sat, 07 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="politics"><![CDATA[राजनीति]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/306/800/450" alt="नयाँ राजनीतिक दल दर्ताको लहर" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>निर्वाचन आयोगको तथ्यांकअनुसार, यस वर्ष मात्र ४५ वटा नयाँ राजनीतिक दलहरू दर्ता भएका छन् र दर्ताका लागि थप ७० आवेदन विचाराधीन छन्। यो संख्या गत वर्षको तुलनामा दोब्बर हो। आयोगले यस्तो अत्यधिक दल दर्ताले चुनावी व्यवस्थापनमा जटिलता थप्ने र मतदाताहरू भ्रमित हुने चिन्ता व्यक्त गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>विश्लेषकहरूका अनुसार, मुख्य दलहरूप्रतिको मोहभंग र युवा नेतृत्वको खोजीले यस्तो प्रवृत्ति बढाएको हो। सामाजिक सञ्जालको माध्यमबाट राजनीतिक परिचालन सहज भएपछि साना र मझौला समूहहरू पनि दल खोल्न प्रोत्साहित भएका छन्। दुर्भाग्यवश अधिकांश नयाँ दलसँग संगठनात्मक संरचना र कार्यक्रम दुवैको अभाव छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>निर्वाचन आयोगले दल दर्ताका मापदण्ड कडा बनाउन संसदमा कानुन संशोधन प्रस्ताव पठाएको छ। प्रस्तावमा कम्तीमा ५ जिल्लामा उपस्थिति र १० हजार सदस्यता अनिवार्य गर्ने व्यवस्था राखिएको छ। प्रमुख दलहरूले यस प्रस्तावलाई सहमति जनाएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>राजनीतिक वैज्ञानिकहरूले भने बहुदलीय प्रजातन्त्रमा दल खोल्ने अधिकार नागरिकको संवैधानिक हक भएकोले मापदण्ड सन्तुलित बनाउन सुझाएका छन्। लोकतन्त्रलाई कमजोर नपार्ने गरी सुधार ल्याउनुपर्ने उनीहरूको मत छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[निर्वाचन आयोगको तथ्यांकअनुसार, यस वर्ष मात्र ४५ वटा नयाँ राजनीतिक दलहरू दर्ता भएका छन्।]]></excerpt:encoded>
+<wp:post_name><![CDATA[new-political-party-registrations-surge-ec-concerned]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-07 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-07 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[सरकारले नयाँ स्थानीय स्वायत्तता विधेयक संसदमा दर्ता गर्यो]]></title>
+<link>http://localhost:8080/local-autonomy-bill-registered-parliament/</link>
+<pubDate>Sun, 08 Jun 2025 14:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="politics"><![CDATA[राजनीति]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/307/800/450" alt="नयाँ स्थानीय स्वायत्तता विधेयक" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>संघीय संसदमा सरकारले स्थानीय तहलाई थप अधिकार र स्रोतसाधन प्रदान गर्ने उद्देश्यले नयाँ स्थानीय स्वायत्तता सुदृढीकरण विधेयक दर्ता गरेको छ। यो विधेयकले स्थानीय सरकारहरूलाई आफ्नै राजस्व संकलन, कर्मचारी नियुक्ति र विकास योजना निर्माणमा थप स्वतन्त्रता दिने व्यवस्था गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>स्थानीय तहका प्रतिनिधिहरूले यो विधेयकलाई ऐतिहासिक कदम भनेर स्वागत गरेका छन्। महासंघ नेपालका अध्यक्षले भने — यो विधेयकले सङ्घीयताको मर्म र संविधानको भावनालाई साँच्चिकै कार्यान्वयन गर्नेछ। अहिलेसम्म धेरै अधिकार संघमै केन्द्रित रहेको थियो, यसले त्यसलाई विकेन्द्रीकरण गर्नेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>केही विज्ञहरूले भने स्थानीय तहको क्षमता विकास नगरी अधिकार मात्र दिँदा जोखिम हुने चेताउनी दिएका छन्। भ्रष्टाचार र पारदर्शिताको प्रश्न पनि उठाइएको छ। विपक्षी दलहरूले विधेयकका केही प्रावधानमा आपत्ति जनाएका छन् र संसदीय समितिमा गहन छलफल माग गरेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सरकारका प्रवक्ताले भने यो विधेयक अन्तर्राष्ट्रिय अनुभव र नेपालको सङ्घीय संरचनाको विशेषतालाई मध्यनजर राखेर तयार पारिएको बताए। संसद्को आगामी सत्रमा यस विषयमा व्यापक छलफल हुने अपेक्षा गरिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[संघीय संसदमा सरकारले स्थानीय तहलाई थप अधिकार र स्रोतसाधन प्रदान गर्ने उद्देश्यले नयाँ स्थानीय स्वायत्तता सुदृढीकरण विधेयक दर्ता गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[local-autonomy-bill-registered-parliament]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-08 14:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-08 14:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== अर्थ (artha) ===================== -->
+
+<item>
+<title><![CDATA[नेपालमा पहिलो पटक इलेक्ट्रिक वाहन विनिर्माण कारखाना खुल्दै]]></title>
+<link>http://localhost:8080/nepal-first-electric-vehicle-manufacturing-plant/</link>
+<pubDate>Mon, 09 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="artha"><![CDATA[अर्थ]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/308/800/450" alt="नेपालमा पहिलो पटक इलेक्ट्रिक वाहन विनिर्माण कारखाना" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपालको औद्योगिक क्षेत्रमा एक ऐतिहासिक कदम स्वरूप, एक नेपाली-चिनियाँ संयुक्त लगानीमा हेटौँडामा इलेक्ट्रिक वाहन असेम्बली प्लान्ट स्थापना हुने भएको छ। उद्योग मन्त्रालयले यसका लागि आवश्यक अनुमति प्रदान गरिसकेको छ र कारखाना निर्माण कार्य सुरु भएको बताइएको छ। प्रारम्भिक चरणमा वार्षिक ५ हजार इलेक्ट्रिक स्कुटर उत्पादन गर्ने योजना छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>उद्योगी घरानाका प्रतिनिधिले भने — यो परियोजनाले स्थानीयस्तरमा २ हजारभन्दा बढी रोजगारी सिर्जना गर्नेछ र नेपालको वातावरण लक्ष्य हासिल गर्न पनि सहयोग पुर्याउनेछ। इलेक्ट्रिक वाहनको आयात निर्भरता घटाउन यो परियोजना महत्त्वपूर्ण छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>उद्योग विज्ञहरूका अनुसार, नेपालमा हाल वार्षिक ५० हजारभन्दा बढी इलेक्ट्रिक वाहन बिक्री हुन्छ र यो बजार दोब्बर गतिमा बढिरहेको छ। स्वदेशी उत्पादनले मूल्य घटाउन र पार्टपुर्जाको उपलब्धता बढाउन मद्दत गर्नेछ। सरकारले यस उद्योगलाई विशेष कर सुविधा र सहुलियत ऋण प्रदान गर्ने घोषणा गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>पर्यावरणविद्हरूले यो खबरलाई उत्साहका साथ स्वागत गरेका छन् र भनेका छन् — नेपालले आफ्नै जलविद्युत् ऊर्जाबाट इलेक्ट्रिक वाहन चलाउने सम्भावना विश्वकै उत्कृष्ट नमुनाको रूपमा स्थापित हुन सक्छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[एक नेपाली-चिनियाँ संयुक्त लगानीमा हेटौँडामा इलेक्ट्रिक वाहन असेम्बली प्लान्ट स्थापना हुने भएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-first-electric-vehicle-manufacturing-plant]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-09 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-09 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपालमा अनलाइन कारोबार ५० अर्ब नाघ्यो — ई-कमर्स बूम जारी]]></title>
+<link>http://localhost:8080/nepal-ecommerce-transactions-exceed-50-billion/</link>
+<pubDate>Tue, 10 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="artha"><![CDATA[अर्थ]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/309/800/450" alt="नेपालमा अनलाइन कारोबार ५० अर्ब नाघ्यो" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाल राष्ट्र बैंकको हालको प्रतिवेदनअनुसार, यस वर्ष नेपालको ई-कमर्स कारोबार पहिलो पटक ५० अर्ब रुपैयाँ नाघेको छ। यो गत वर्षको तुलनामा ४० प्रतिशतले बढी हो। डिजिटल भुक्तानी प्रणाली, स्मार्टफोन प्रयोगकर्ताको वृद्धि र इन्टरनेटको पहुँच बढेसँगै अनलाइन किनमेल संस्कृति नेपालमा तीव्र रूपमा विकसित भइरहेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Daraz, SastoDeal र HamroBazar जस्ता प्लेटफर्महरूको कारोबार उल्लेखनीय रूपमा बढेको छ। ग्रामीण क्षेत्रसम्म इन्टरनेट पहुँच पुगेसँगै काठमाडौं बाहिरबाट पनि उल्लेखनीय अनलाइन कारोबार भइरहेको तथ्यांकले देखाएको छ। महिला उद्यमीहरूले आफ्नो उत्पादन अनलाइन बेच्ने क्रम पनि बढेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल ई-कमर्स संघका अध्यक्षले यो वृद्धिलाई सकारात्मक संकेत बताए। उनका अनुसार, लजिस्टिक्स पूर्वाधार र ग्राहक संरक्षण ऐन अझ सुदृढ बनाइयो भने अर्को पाँच वर्षमा यो बजार पाँच गुणाले बढ्ने सम्भावना छ। सरकारले ई-कमर्स नीति तयार पार्ने काम गरिरहेको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>उपभोक्ता सरोकार केन्द्रले भने अनलाइन ठगी र नक्कली सामानको बिक्री बढेको गुनासो आइरहेकाले नियमन कडा पार्न माग गरेको छ। सरकारले डिजिटल कारोबार ऐन संशोधन गरी यसलाई सम्बोधन गर्ने बताएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाल राष्ट्र बैंकको हालको प्रतिवेदनअनुसार, यस वर्ष नेपालको ई-कमर्स कारोबार पहिलो पटक ५० अर्ब रुपैयाँ नाघेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-ecommerce-transactions-exceed-50-billion]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-10 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-10 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[चिया र कफी निर्यातमा नयाँ कीर्तिमान — यूरोपेली बजारमा माग बढ्दो]]></title>
+<link>http://localhost:8080/nepal-tea-coffee-export-record-european-market/</link>
+<pubDate>Wed, 11 Jun 2025 08:30:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="artha"><![CDATA[अर्थ]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/310/800/450" alt="चिया र कफी निर्यातमा नयाँ कीर्तिमान" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>व्यापार तथा निर्यात प्रवर्द्धन केन्द्रको नवीनतम तथ्यांकले नेपालको चिया र कफी निर्यात यस वर्ष नयाँ कीर्तिमान कायम गरेको देखाएको छ। इलाम र पाँचथरको अर्गानिक चिया र पाल्पाको रोबस्टा कफी युरोपेली देशहरू जर्मनी, फ्रान्स र नेदरल्यान्ड्समा विशेष माग भएको बताइएको छ। यस वर्ष मात्र ३ करोड ५० लाख अमेरिकी डलरको चिया र कफी निर्यात भएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल चिया तथा कफी विकास बोर्डका अनुसार, अर्गानिक र फेयरट्रेड प्रमाणीकरण प्राप्त उत्पादनहरूको माग सबैभन्दा बढी छ। यूरोपेली उपभोक्ताहरूको स्वास्थ्य सचेतना र नैतिक उपभोग प्रवृत्तिले नेपाली उत्पादनको बजार विस्तार गराएको हो। बोर्डले अझ बढी किसानलाई अर्गानिक प्रमाणीकरण गराउन अनुदान कार्यक्रम सुरु गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>इलामका चिया उत्पादक किसानले यो खबरलाई आफ्नो कठिन परिश्रमको प्रतिफल भनेर खुशी व्यक्त गरेका छन्। एक सहकारी अध्यक्षले बताए — अहिले विदेशी ग्राहकहरू सिधै हाम्रो बागानमा आउँछन्, हामीले कुनै बिचौलिया चाहिँदैन। यसले किसानको आय उल्लेखनीय बढेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सरकारले आगामी वर्ष निर्यात लक्ष्य ५ करोड डलर राखेको छ र यसका लागि ब्राण्ड नेपाल अन्तर्राष्ट्रिय प्रवर्द्धन अभियान सञ्चालन गर्ने बताएको छ। यो क्षेत्रमा युवा उद्यमीहरूको सहभागिता बढाउने थप कार्यक्रम पनि आउँदो बजेटमा राखिनेछ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपालको चिया र कफी निर्यात यस वर्ष नयाँ कीर्तिमान कायम गरेको देखाएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-tea-coffee-export-record-european-market]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-11 08:30:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-11 08:30:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== अर्थतन्त्र (economics) ===================== -->
+
+<item>
+<title><![CDATA[नेपालको सार्वजनिक ऋण GDP को ४५ प्रतिशत पुग्यो — विज्ञ चिन्तित]]></title>
+<link>http://localhost:8080/nepal-public-debt-reaches-45-percent-gdp/</link>
+<pubDate>Thu, 12 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="economics"><![CDATA[अर्थतन्त्र]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/311/800/450" alt="नेपालको सार्वजनिक ऋण GDP को ४५ प्रतिशत" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>अर्थ मन्त्रालयको वार्षिक आर्थिक सर्वेक्षणले नेपालको सार्वजनिक ऋण कुल गार्हस्थ उत्पादन (GDP) को ४५ प्रतिशत पुगेको देखाएको छ। यो पाँच वर्षअघिको तुलनामा १५ प्रतिशत बिन्दुले बढी हो। मुख्यतः पूर्वाधार विकास र कोभिड पछिको आर्थिक पुनरुत्थानका लागि लिइएका ऋणले यो वृद्धि ल्याएको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अर्थशास्त्रीहरूको एक वर्गले यो स्तरलाई अझै व्यवस्थापनयोग्य मानेका छन् र भनेका छन् — विकासशील देशका लागि ५०-६० प्रतिशतसम्म सार्वजनिक ऋण सामान्य हुन्छ, तर ऋणको गुणस्तर र प्रतिफल दर महत्त्वपूर्ण प्रश्न हो। अर्को वर्गले भने बढ्दो ब्याज दायित्वले भविष्यमा सामाजिक खर्च कटौतीको दबाब पार्ने चेतावनी दिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अन्तर्राष्ट्रिय मुद्रा कोष (IMF) ले हालै प्रकाशित गरेको नेपाल आर्थिक आउटलुकमा सार्वजनिक ऋण व्यवस्थापनमा सुधार ल्याउन र राजस्व परिचालन बढाउन सिफारिस गरेको छ। विशेष गरी कर चुहावट नियन्त्रण र कर आधार विस्तारमा ध्यान दिनुपर्ने IMF को सुझाव छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सरकारले भने ऋण लिएर गरेका लगानीहरूले दीर्घकालमा राजस्व वृद्धि गर्ने र ऋण सेवा भार सहज हुने अपेक्षा राखेको बताएको छ। अर्थमन्त्रीले संसद्को अर्थ समितिमा उपस्थित भएर यस विषयमा विस्तृत जानकारी दिने बताएका छन्।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपालको सार्वजनिक ऋण कुल गार्हस्थ उत्पादन (GDP) को ४५ प्रतिशत पुगेको देखाएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-public-debt-reaches-45-percent-gdp]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-12 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-12 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[रेमिट्यान्स प्रवाहमा गिरावट — वैदेशिक रोजगारमा कडिएको नियमन कारण]]></title>
+<link>http://localhost:8080/remittance-decline-foreign-employment-regulations/</link>
+<pubDate>Fri, 13 Jun 2025 13:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="economics"><![CDATA[अर्थतन्त्र]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/312/800/450" alt="रेमिट्यान्स प्रवाहमा गिरावट" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाल राष्ट्र बैंकको पछिल्लो तथ्यांकले यस वर्षको पहिलो छ महिनामा रेमिट्यान्स आप्रवाहमा ८ प्रतिशतले कमी आएको देखाएको छ। यो कमीले देशको विदेशी मुद्रा सञ्चितिमा दबाब पार्न थालेको अर्थविद्हरूले बताएका छन्। कुल रेमिट्यान्स GDP को करिब २५ प्रतिशत रहँदै आएको नेपालका लागि यो गिरावट चिन्ताजनक संकेत हो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>मुख्य गन्तव्य देशहरू खाडी क्षेत्र र मलेसियामा कामदारको माग घटेको तथा ती देशहरूले विदेशी कामदारमाथि थप नियमन लगाएको कारण नेपाली श्रमिकको संख्यामा कमी आएको वैदेशिक रोजगार विभागले जनाएको छ। यसका अतिरिक्त, गैरकानुनी मार्गबाट पठाइने पैसा हुन्डी कारोबारमा पनि वृद्धि भएको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>वैदेशिक रोजगार बोर्डले भने हुन्डी नियन्त्रणका लागि कडा अनुगमन बढाइने र बैंकिङ च्यानलबाट रेमिट्यान्स पठाउन प्रोत्साहन गर्न सेवा शुल्क घटाउन बैंकहरूलाई निर्देशन दिइने बताएको छ। श्रमिकहरूलाई कौशल विकास तालिम दिएर उच्च मूल्यको बजारमा पठाउने रणनीति पनि तयार पारिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अर्थशास्त्रीहरूले दीर्घकालमा रेमिट्यान्समा निर्भरता घटाउँदै स्वदेशी उत्पादनशील रोजगारी सिर्जना गर्नुपर्ने आवश्यकतामा जोड दिएका छन्। यो गिरावट एक चेतावनी हो कि नेपालले आफ्नो आर्थिक संरचना परिवर्तन गर्न ढिलो गर्नु हुँदैन भन्ने सन्देश दिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[यस वर्षको पहिलो छ महिनामा रेमिट्यान्स आप्रवाहमा ८ प्रतिशतले कमी आएको देखाएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[remittance-decline-foreign-employment-regulations]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-13 13:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-13 13:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपाल सरकारको बजेट घाटा — कर संकलनमा लक्ष्यभन्दा पछि]]></title>
+<link>http://localhost:8080/nepal-budget-deficit-tax-collection-below-target/</link>
+<pubDate>Sat, 14 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="economics"><![CDATA[अर्थतन्त्र]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/313/800/450" alt="नेपाल सरकारको बजेट घाटा" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>महालेखा नियन्त्रक कार्यालयको मध्यावधि प्रतिवेदनले चालु आर्थिक वर्षमा कर संकलन लक्ष्यको मात्र ७२ प्रतिशत हासिल भएको देखाएको छ। आन्तरिक राजस्व विभागले लक्ष्यभन्दा १२ अर्ब रुपैयाँ कम राजस्व संकलन भएकाले बजेट घाटा बढ्ने संकेत देखिएको बताएको छ। विकास खर्च पूरा गर्न अतिरिक्त आन्तरिक ऋण उठाउनुपर्ने अवस्था आउन सक्ने चेतावनी दिइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>राजस्व कमीका मुख्य कारणहरूमा आयातमा आएको कमी, निर्माण क्षेत्रमा मन्दी र करचुहावट नियन्त्रण नभएको उल्लेख गरिएको छ। यस वर्ष निर्माण सामग्रीको आयात घटेसँगै भन्सार राजस्वमा उल्लेखनीय कमी आएको छ। विद्युत् महसुल र मूल्य अभिवृद्धि करमा पनि अपेक्षाअनुसार संकलन हुन सकेको छैन।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अर्थ मन्त्रालयले बाँकी मासमा राजस्व संकलन तीव्र पार्न विशेष अभियान सञ्चालन गर्ने बताएको छ। कर फाँट छानबिन बढाउने, ठूला करदाताको विशेष निगरानी गर्ने र कर एकाइ नटुङ्गिएका मुद्दा फछ्र्यौट गर्ने काम अघि बढाइने जनाइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>वित्त विज्ञहरूले भने संरचनात्मक कर सुधार नगरी अल्पकालीन उपायले मात्र राजस्व समस्या समाधान नहुने बताएका छन्। कर जाल विस्तार गर्न र डिजिटल अर्थतन्त्रलाई कर प्रणालीमा समेट्न ढिलाइ भइरहेको उनीहरूको टिप्पणी छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[चालु आर्थिक वर्षमा कर संकलन लक्ष्यको मात्र ७२ प्रतिशत हासिल भएको देखाएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-budget-deficit-tax-collection-below-target]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-14 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-14 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== कूटनीति (kutniti) ===================== -->
+
+<item>
+<title><![CDATA[नेपाल-अमेरिका रणनीतिक साझेदारी सम्झौतामा हस्ताक्षर]]></title>
+<link>http://localhost:8080/nepal-usa-strategic-partnership-agreement-signed/</link>
+<pubDate>Sun, 15 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="kutniti"><![CDATA[कूटनीति]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/314/800/450" alt="नेपाल-अमेरिका रणनीतिक साझेदारी सम्झौता" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाल र संयुक्त राज्य अमेरिकाबीच व्यापक रणनीतिक साझेदारी सम्झौतामा हस्ताक्षर भएको छ। काठमाडौंमा भएको विशेष समारोहमा नेपालका परराष्ट्र मन्त्री र अमेरिकाका दक्षिण तथा मध्य एसिया मामिला सहायक विदेश सचिवले सम्झौतामा हस्ताक्षर गरे। यो सम्झौता दुई देशबीचको सम्बन्धलाई नयाँ उचाइमा पुर्याउने ऐतिहासिक कदम मानिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सम्झौताअन्तर्गत शिक्षा, स्वास्थ्य, जलवायु, व्यापार र सुरक्षा क्षेत्रमा सहकार्य बढाउने उल्लेख गरिएको छ। अमेरिकाले नेपालमा थप लगानी ल्याउन सहयोग गर्ने र नेपाली युवाहरूका लागि शैक्षिक छात्रवृत्ति बढाउने प्रतिबद्धता जनाएको छ। MCC (Millennium Challenge Corporation) परियोजनाको सफल कार्यान्वयनपछि यो नयाँ सम्झौता थप सहकार्यको ढोका खोल्ने अपेक्षा राखिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>चीन र भारत दुवैसँग सन्तुलित सम्बन्ध राख्दै आएको नेपालको लागि यो सम्झौताले कूटनीतिक जटिलता थप्न सक्ने विश्लेषकहरूले सतर्क गराएका छन्। नेपालले संप्रभुताको सिद्धान्त अनुसार कुनै एक देशप्रति पक्षपाती नभई बहुपक्षीय सम्बन्ध कायम राख्नुपर्ने उनीहरूको सुझाव छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>परराष्ट्र मन्त्रीले भने — यो सम्झौता नेपालको राष्ट्रिय हितमा आधारित छ र हाम्रो असंलग्नताको नीतिसँग पूर्णतः मेल खान्छ। हामीले विश्वका सबै देशसँग मैत्रीपूर्ण सम्बन्ध राख्ने हाम्रो परम्परागत नीतिलाई कायम राखेका छौं।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाल र संयुक्त राज्य अमेरिकाबीच व्यापक रणनीतिक साझेदारी सम्झौतामा हस्ताक्षर भएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-usa-strategic-partnership-agreement-signed]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-15 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-15 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपालले SAARC सम्मेलन काठमाडौंमा आयोजना गर्ने घोषणा गर्यो]]></title>
+<link>http://localhost:8080/nepal-to-host-saarc-summit-kathmandu/</link>
+<pubDate>Mon, 16 Jun 2025 12:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="kutniti"><![CDATA[कूटनीति]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/315/800/450" alt="नेपालले SAARC सम्मेलन आयोजना गर्ने" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाल सरकारले आगामी नोभेम्बरमा काठमाडौंमा SAARC (दक्षिण एसियाली क्षेत्रीय सहयोग संगठन) शिखर सम्मेलन आयोजना गर्ने घोषणा गरेको छ। यो सम्मेलन ९ वर्षको अन्तरालपछि हुने भएको हो — गत सम्मेलन २०१६ मा भारत-पाकिस्तान तनावका कारण रद्द भएको थियो। सबै आठ सदस्य देशहरूले भाग लिने प्रारम्भिक सहमति जनाएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>परराष्ट्र मन्त्रालयले सम्मेलनको एजेन्डामा व्यापार सरलीकरण, जलवायु परिवर्तन, आतंकवाद र क्षेत्रीय विकासका विषय समावेश हुने जनाएको छ। विशेष गरी सदस्य देशहरूबीचको कनेक्टिभिटी र यातायात समन्वय मुख्य छलफलको विषय हुनेछ। नेपालले यस मञ्चलाई जलवायु न्यायका लागि आवाज उठाउने अवसरका रूपमा पनि लिने जनाइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>भारत र पाकिस्तानबीचको सम्बन्धमा हालको तनावलाई ध्यानमा राखेर सम्मेलन सफल बनाउन कूटनीतिक पहल तीव्र पारिएको छ। नेपालले दुवै देशसँग सम्पर्क राखेर मतभेद घटाउने पहल गरेको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>काठमाडौंमा यो स्तरको सम्मेलन आयोजना भएमा सुरक्षा व्यवस्था, होटल र यातायातमा थप तयारी आवश्यक पर्नेछ। सरकारले सम्मेलनका लागि विशेष बजेट विनियोजन गरी अन्तर्राष्ट्रिय स्तरको व्यवस्थापन सुनिश्चित गर्ने बताएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाल सरकारले आगामी नोभेम्बरमा काठमाडौंमा SAARC शिखर सम्मेलन आयोजना गर्ने घोषणा गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-to-host-saarc-summit-kathmandu]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-16 12:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-16 12:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[भारतसँगको खुला सिमाना समझदारी पुनर्विचारमा — संसदमा बहस]]></title>
+<link>http://localhost:8080/nepal-india-open-border-policy-parliament-debate/</link>
+<pubDate>Tue, 17 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="kutniti"><![CDATA[कूटनीति]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/316/800/450" alt="भारतसँगको खुला सिमाना समझदारी पुनर्विचार" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाल-भारत खुला सिमाना नीतिको पुनर्विचार गर्नुपर्ने माग संसदमा जोरदार रूपमा उठेको छ। विभिन्न दलका सांसदहरूले सिमाना क्षेत्रमा बढेको अपराध, तस्करी र अवैध बसोबासका समस्यालाई उल्लेख गर्दै सिमाना व्यवस्थापनमा आमूल सुधार माग गरेका छन्। आधुनिक प्रविधिको प्रयोग गरी सिमाना निगरानी बढाउनुपर्ने सुझाव आएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सरकारी पक्षले भने नेपाल-भारत खुला सिमाना दशकौँदेखिको परम्परा र दुवै देशका नागरिकको आर्थिक जीवनरेखा भएकाले एकाएक परिवर्तन उचित नहुने तर्क गरेको छ। परराष्ट्र मन्त्रालयले द्विपक्षीय संयन्त्रबाट समस्या समाधान गर्ने नीति लिएको बताएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सीमा क्षेत्रका स्थानीय व्यापारी र किसानहरूले भने सिमाना बन्द गरिए आफ्नो जीविका प्रभावित हुने डर व्यक्त गरेका छन्। दुवै देशको बजारमा आवत-जावत उनीहरूको दैनिक जीवनको अभिन्न हिस्सा भएको बताएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सुरक्षा विशेषज्ञहरूले खुला सिमानालाई पूर्णतः बन्द नगरी स्मार्ट बोर्डर व्यवस्थापन अपनाउन सुझाव दिएका छन् — जसमा बायोमेट्रिक प्रविधि, CCTV क्यामेरा र समन्वित गस्तीको व्यवस्था गर्न सकिन्छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाल-भारत खुला सिमाना नीतिको पुनर्विचार गर्नुपर्ने माग संसदमा जोरदार रूपमा उठेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-india-open-border-policy-parliament-debate]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-17 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-17 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== खेलकुद (sports) ===================== -->
+
+<item>
+<title><![CDATA[नेपाली पुरुष क्रिकेट टोलीले ICC विश्वकप छनोटमा स्थान पक्का गर्यो]]></title>
+<link>http://localhost:8080/nepal-mens-cricket-qualifies-icc-world-cup/</link>
+<pubDate>Wed, 18 Jun 2025 16:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="sports"><![CDATA[खेलकुद]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/317/800/450" alt="नेपाली पुरुष क्रिकेट टोली ICC विश्वकप छनोट" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>ऐतिहासिक उपलब्धि हासिल गर्दै नेपाली पुरुष क्रिकेट टोलीले ICC T20 विश्वकप छनोट प्रतियोगितामा पहिलो स्थान हासिल गरी मुख्य विश्वकपमा स्थान पक्का गरेको छ। कुवैतमा भएको छनोट प्रतियोगितामा नेपालले ८ खेल मध्ये ७ वटामा जीत हासिल गर्यो। कप्तान रोहित पौडेलको नेतृत्वमा टोलीले अत्यन्त सुसंगठित क्रिकेट खेल्यो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपालका लागि यो पहिलो पटक ICC को मुख्य विश्वकपमा प्रत्यक्ष योग्यता हासिल गरेको हो। यसअघि नेपाल २०१४ र २०१६ को T20 विश्वकपमा सहभागी भएको थियो तर त्यो समयभन्दा हालको प्रदर्शन धेरै परिपक्व र प्रतिस्पर्धात्मक रहेको क्रिकेट विश्लेषकहरूले बताएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल क्रिकेट संघका अध्यक्षले भने — यो दिन नेपाली क्रिकेटको स्वर्णिम अध्याय हो। हाम्रा खेलाडीहरूले अथक परिश्रम र समर्पण देखाएका छन्। उनीहरूलाई राज्यले पनि उचित सुविधा र सहयोग दिनुपर्छ। विश्वकप टोलीको तयारीका लागि विशेष बजेट स्वीकृत गर्न माग गरिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>काठमाडौंमा टोलीलाई भव्य स्वागत गर्ने तयारी भइरहेको छ। हजारौं युवा क्रिकेट प्रशंसकहरूले सामाजिक सञ्जालमा खुशी व्यक्त गरेका छन्। यो उपलब्धिले नेपालमा क्रिकेटप्रतिको रुचि अझ बढाउनेछ भन्ने विश्लेषकहरूको अपेक्षा छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाली पुरुष क्रिकेट टोलीले ICC T20 विश्वकप छनोट प्रतियोगितामा पहिलो स्थान हासिल गरी मुख्य विश्वकपमा स्थान पक्का गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-mens-cricket-qualifies-icc-world-cup]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-18 16:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-18 16:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपाली पहलवान एशियन गेम्समा स्वर्ण पदक जित्न सफल]]></title>
+<link>http://localhost:8080/nepal-wrestler-wins-gold-asian-games/</link>
+<pubDate>Thu, 19 Jun 2025 15:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="sports"><![CDATA[खेलकुद]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/318/800/450" alt="नेपाली पहलवान एशियन गेम्समा स्वर्ण पदक" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>एशियन गेम्समा नेपालले पहलवानी (कुस्ती) मा ऐतिहासिक स्वर्ण पदक जितेको छ। पोखराकी २२ वर्षीया दिव्या शाहले महिला ५७ किलोग्राम वर्गमा जापानकी बलशाली प्रतिस्पर्धीलाई हराएर सुवर्ण पदक आफ्नो नाममा गरेकी हुन्। यो नेपालले कुस्तीमा जितेको पहिलो एशियाड स्वर्ण पदक हो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>दिव्या शाहले मात्र १५ वर्षको उमेरमा राष्ट्रिय टोलीमा प्रवेश गरेकी थिइन्। पाँच वर्षको कठोर अभ्यास र अनेक चुनौतीपछि आज उनले यो महान् उपलब्धि हासिल गरेकी छन्। फाइनलमा उनले तीन मिनेटमा नै प्रतिद्वन्द्वीलाई पराजित गरेर दर्शकलाई अचम्म पारेकी थिइन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल ओलम्पिक समितिका अध्यक्षले भने — दिव्याको यो जीत आगामी पुस्ताका नेपाली खेलाडीहरूका लागि प्रेरणाको स्रोत हो। सरकारले उनलाई राष्ट्रिय खेल पुरस्कार र नगद पुरस्कार प्रदान गर्ने घोषणा गरेको छ। जन्मस्थल पोखरामा उनको सम्मानमा भव्य स्वागत कार्यक्रम गरिनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल सरकारले यस उपलब्धिपछि खेलकुद क्षेत्रमा बजेट बढाउने र गाउँ-गाउँमा कुस्ती प्रशिक्षण केन्द्र स्थापना गर्ने योजना बनाएको जनाइएको छ। नेपाली खेलकुदको नयाँ युग सुरु भएको खेलकुद प्रेमीहरूले टिप्पणी गरेका छन्।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[एशियन गेम्समा नेपालले पहलवानी मा ऐतिहासिक स्वर्ण पदक जितेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-wrestler-wins-gold-asian-games]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-19 15:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-19 15:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपाल फुटबल — राष्ट्रिय लिग प्रणाली सुधारको माग]]></title>
+<link>http://localhost:8080/nepal-football-national-league-reform-demand/</link>
+<pubDate>Fri, 20 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="sports"><![CDATA[खेलकुद]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/319/800/450" alt="नेपाल फुटबल राष्ट्रिय लिग प्रणाली सुधार" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाली फुटबलमा दीर्घकालीन सुधारका लागि खेलाडी, कोच र क्लबहरूको एक संयुक्त मञ्चले ऑल नेपाल फुटबल एसोसिएसन (ANFA) समक्ष विस्तृत सुधार प्रस्ताव पेश गरेको छ। प्रस्तावमा लिग संरचनामा सुधार, युवा एकेडेमी स्थापना, खेलाडीलाई नियमित तलब र बिमाको व्यवस्था र विदेशी कोचको नियुक्ति गर्ने माग समावेश छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाली फुटबल लामो समयदेखि संगठनात्मक समस्याबाट ग्रस्त रहेको छ। ANFA मा बारम्बार हुने आन्तरिक द्वन्द्व र FIFA प्रतिबन्धको इतिहासले नेपाली फुटबललाई पछि धकेलेको खेल विश्लेषकहरूले बताएका छन्। अहिले नेपाल FIFA र्याङ्किङमा १९० औं स्थानमा छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>युवा खेलाडीहरूले भनेका छन् — हाम्रो प्रतिभा छ, अवसर छैन। राम्रो पूर्वाधार र व्यावसायिक लिग भयो भने नेपाली खेलाडीहरू अन्तर्राष्ट्रिय स्तरमा प्रतिस्पर्धी हुन सक्छन्। कुनै विदेशी क्लबमा नेपाली खेलाडी हुन सक्ने सपना देखिरहेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>ANFA का पदाधिकारीहरूले प्रस्तावलाई गम्भीरतापूर्वक अध्ययन गर्ने र आगामी महासभामा थप छलफल गर्ने बताएका छन्। सरकारले पनि खेलकुद नीतिमा फुटबललाई प्राथमिकता दिने संकेत दिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाली फुटबलमा दीर्घकालीन सुधारका लागि खेलाडी, कोच र क्लबहरूको एक संयुक्त मञ्चले ANFA समक्ष विस्तृत सुधार प्रस्ताव पेश गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-football-national-league-reform-demand]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-20 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-20 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== मनोरञ्जन (entertainment) ===================== -->
+
+<item>
+<title><![CDATA[नेपाली चलचित्र 'हिमाल पारिको माया' अन्तर्राष्ट्रिय चलचित्र महोत्सवमा चयन]]></title>
+<link>http://localhost:8080/nepali-film-himal-pariko-maya-international-film-festival/</link>
+<pubDate>Sat, 21 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="entertainment"><![CDATA[मनोरञ्जन]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/320/800/450" alt="नेपाली चलचित्र हिमाल पारिको माया अन्तर्राष्ट्रिय चलचित्र महोत्सव" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाली चलचित्र 'हिमाल पारिको माया' ले प्रतिष्ठित बर्लिन अन्तर्राष्ट्रिय चलचित्र महोत्सवको मुख्य प्रतिस्पर्धी विभागमा स्थान पाएको छ। यो नेपाली चलचित्रका लागि ऐतिहासिक उपलब्धि हो। चलचित्रले मुस्ताङमा आधारित एक प्रेमकथालाई हिमाली जीवन र आधुनिकताको द्वन्द्वसँग जोड्दै मानवीय संवेदनाको गहिरो चित्रण गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>युवा निर्देशक सुजन राईको यो पहिलो फिचर फिल्म हो। उनले भने — नेपाली कथा विश्व मञ्चमा पुग्न सक्छ भनेर मैले विश्वास गरेको थिएँ। यो छनोटले हाम्रो सिनेमाका लागि नयाँ ढोका खुलेको छ। चलचित्रको मुख्य भूमिकामा काठमाडौंकी उदीयमान कलाकार प्रियंका थापाले अभिनय गरेकी छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल चलचित्र विकास बोर्डले यो उपलब्धिलाई नेपाली सिनेमाको नयाँ युगको सुरुआत भनेर स्वागत गरेको छ। बोर्डले स्वतन्त्र र कलात्मक चलचित्रका लागि विशेष अनुदान कोष स्थापना गर्ने घोषणा गरेको छ। दर्जनौँ युवा निर्देशकहरूले यस खबरबाट प्रेरणा लिएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>चलचित्र बर्लिनमा प्रदर्शन भएपछि नेपालमा पनि सिमित भित्र्याइ (limited release) मा दर्शकसमक्ष आउनेछ। अन्तर्राष्ट्रिय वितरणका लागि पनि वार्ता भइरहेको निर्माण पक्षले जनाएको छ। नेपाली सिनेमाको यो यात्रा ओटीटी प्लेटफर्ममा पनि आउने बताइएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाली चलचित्र 'हिमाल पारिको माया' ले प्रतिष्ठित बर्लिन अन्तर्राष्ट्रिय चलचित्र महोत्सवको मुख्य प्रतिस्पर्धी विभागमा स्थान पाएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepali-film-himal-pariko-maya-international-film-festival]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-21 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-21 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपाली संगीतमा लोक र आधुनिकको मेल — युट्युबमा करोड भ्यूको यात्रा]]></title>
+<link>http://localhost:8080/nepali-music-folk-modern-fusion-youtube-million-views/</link>
+<pubDate>Sun, 22 Jun 2025 14:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="entertainment"><![CDATA[मनोरञ्जन]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/321/800/450" alt="नेपाली संगीतमा लोक र आधुनिकको मेल" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपाली संगीत उद्योगमा एक नयाँ प्रवृत्ति देखिएको छ — परम्परागत लोक सुर र आधुनिक इन्डी पप संगीतको सङ्गम। युवा संगीतकारहरूले दोहोरी, झ्याउरे र नौमती बाजाका धुनहरूलाई गिटार, सिन्थेसाइजर र इलेक्ट्रोनिक बिटसँग मिलाएर नयाँ विधाको सिर्जना गरेका छन् जुन अन्तर्राष्ट्रिय दर्शकहरूमा पनि लोकप्रिय भइरहेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>भर्खरै रिलिज भएको ब्यान्ड 'हिमाल इको' को गीत 'मायाको पहाड' ले युट्युबमा एक हप्तामै ५० लाख भ्यू पार गरेको छ। भारत, जापान र अमेरिकाका श्रोताहरूले यो गीतलाई सोसल मिडियामा शेयर गरिरहेका छन्। ब्यान्डका संगीतकार अर्जुन गुरुङले भने — हामीले आफ्नो जरा नभुली आधुनिकतासँग जोड्न खोजेका छौं।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>यो प्रवृत्तिले नेपाली भाषा र संस्कृतिको अन्तर्राष्ट्रिय प्रचारमा महत्त्वपूर्ण भूमिका खेल्न थालेको सांस्कृतिक विश्लेषकहरूले बताएका छन्। स्ट्रिमिङ प्लेटफर्म Spotify मा नेपाली संगीतको श्रोता संख्या यस वर्ष ३ गुणाले बढेको तथ्यांक छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल संगीत महासंघले यस्ता कलाकारहरूलाई अन्तर्राष्ट्रिय मञ्चमा प्रस्तुत गर्न 'नेपाल साउन्ड्स' नामक अन्तर्राष्ट्रिय दौरा कार्यक्रम सुरु गर्ने बताएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[युवा संगीतकारहरूले दोहोरी, झ्याउरे र नौमती बाजाका धुनहरूलाई गिटार, सिन्थेसाइजर र इलेक्ट्रोनिक बिटसँग मिलाएर नयाँ विधाको सिर्जना गरेका छन्।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepali-music-folk-modern-fusion-youtube-million-views]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-22 14:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-22 14:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[काठमाडौंमा पहिलो OTT चलचित्र महोत्सव — नेपाली कन्टेन्टमा नयाँ युग]]></title>
+<link>http://localhost:8080/kathmandu-first-ott-film-festival-nepali-content-new-era/</link>
+<pubDate>Mon, 23 Jun 2025 12:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="entertainment"><![CDATA[मनोरञ्जन]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/322/800/450" alt="काठमाडौंमा पहिलो OTT चलचित्र महोत्सव" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>काठमाडौंमा पहिलो पटक OTT (Over-The-Top) चलचित्र महोत्सव आयोजना भएको छ। तीन दिनसम्म चल्ने यो महोत्सवमा नेपालका पाँच वटा OTT प्लेटफर्मले आफ्ना मौलिक नेपाली सिरिज र फिल्महरू प्रदर्शन गरेका छन्। दर्शकहरूले प्रत्येक सामग्रीका बारेमा सिधा निर्माताहरूसँग छलफल गर्ने अवसर पाएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपालको OTT बजार गत दुई वर्षमा उल्लेखनीय रूपमा बढेको छ। Mero Movies, Nagarik OTT र Hamro Cinema जस्ता प्लेटफर्महरूमा नेपाली दर्शकको संख्या तीव्र गतिमा बढिरहेको छ। वेब सिरिज र लघु चलचित्रले युवा पुस्तामा विशेष लोकप्रियता पाएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>चलचित्र निर्माताहरूका अनुसार, OTT प्लेटफर्मले नेपाली कन्टेन्टलाई विश्वभर रहेका नेपाली डायस्पोरासमक्ष पुर्याउन महत्त्वपूर्ण भूमिका खेलिरहेको छ। अमेरिका, अस्ट्रेलिया र युरोपमा रहेका नेपाली दर्शकहरू नेपाली कन्टेन्टका लागि तिर्न तयार रहेको देखिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>महोत्सवको समापन समारोहमा सर्वश्रेष्ठ नेपाली OTT सामग्रीका लागि पुरस्कार वितरण गरियो। श्रेष्ठ सिरिजको पुरस्कार 'पहाडको छाया' ले जित्यो भने श्रेष्ठ लघु चलचित्रको सम्मान 'बिर्सिनु नसक्ने दिन' लाई दिइयो।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[काठमाडौंमा पहिलो पटक OTT चलचित्र महोत्सव आयोजना भएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[kathmandu-first-ott-film-festival-nepali-content-new-era]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-23 12:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-23 12:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== विचार (opinion) ===================== -->
+
+<item>
+<title><![CDATA[कृत्रिम बुद्धिमत्ताले नेपालको शिक्षा प्रणालीलाई कसरी बदल्न सक्छ?]]></title>
+<link>http://localhost:8080/ai-how-it-can-transform-nepal-education/</link>
+<pubDate>Tue, 24 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="opinion"><![CDATA[विचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/323/800/450" alt="कृत्रिम बुद्धिमत्ताले नेपालको शिक्षा प्रणाली" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>विश्वभर कृत्रिम बुद्धिमत्ता (AI) ले शिक्षा क्षेत्रमा क्रान्तिकारी परिवर्तन ल्याउन थालेको छ। नेपाल जस्तो विकासशील देशमा जहाँ दक्ष शिक्षकको अभाव, भौगोलिक विकटता र गुणस्तरीय शैक्षिक सामग्रीको कमी मुख्य चुनौती छ, त्यहाँ AI आधारित शिक्षा प्रणालीले ठूलो अवसर ल्याउन सक्छ। Adaptive learning प्रविधिले प्रत्येक विद्यार्थीको गतिअनुसार पाठ्यक्रम समायोजन गर्न सक्छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपालको पहाडी र हिमाली क्षेत्रमा इन्टरनेट पहुँच बढेसँगै AI-सहायक ट्युटर्सले दुर्गम विद्यालयका विद्यार्थीहरूलाई पनि शहरको समान गुणस्तरको शिक्षा दिन सक्छन्। नेपाली भाषामा AI उपकरणहरूको विकास भयो भने यो सपना थप नजिक हुनेछ। हाल केही स्टार्टअपहरूले यस दिशामा काम गरिरहेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>तर यसका चुनौती पनि छन्। AI शिक्षा भनेको शिक्षकको विकल्प होइन, बरु शिक्षकको हातको हतियार हो। मानवीय स्पर्श, सिकाइमा उत्प्रेरणा दिने र विद्यार्थीको भावनात्मक विकासमा ध्यान दिने काम AI ले गर्न सक्दैन। AI र शिक्षकको सहकार्यात्मक मोडेलले मात्र वास्तविक शैक्षिक परिवर्तन ल्याउन सक्छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सरकारले AI शिक्षाका लागि राष्ट्रिय नीति तयार गर्नु जरुरी छ। डिजिटल साक्षरता बढाउन, शिक्षकलाई AI उपकरण प्रयोगमा तालिम दिन र सबैका लागि समान डिजिटल पहुँच सुनिश्चित गर्न ठोस कार्यक्रम ल्याउनुपर्छ। अन्यथा AI ले शहर र गाउँबीचको शैक्षिक खाडललाई अझ बढाउने खतरा छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपाल जस्तो विकासशील देशमा AI आधारित शिक्षा प्रणालीले ठूलो अवसर ल्याउन सक्छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[ai-how-it-can-transform-nepal-education]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-24 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-24 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपालको जलविद्युत् सम्पदा — अर्थतन्त्र परिवर्तनको वास्तविक ढोका]]></title>
+<link>http://localhost:8080/nepal-hydropower-potential-real-door-to-economic-transformation/</link>
+<pubDate>Wed, 25 Jun 2025 13:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="opinion"><![CDATA[विचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/324/800/450" alt="नेपालको जलविद्युत् सम्पदा र अर्थतन्त्र" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपालसँग ८३ हजार मेगावाट जलविद्युत् उत्पादन क्षमता छ — विश्वमा दोस्रो ठूलो। तर हाल हामी मात्र ३ हजार मेगावाट उत्पादन गरिरहेका छौं। यो अन्तर भनेको हाम्रो आर्थिक विकासको सबैभन्दा ठूलो अधूरो सपना हो। यदि नेपालले आफ्नो जलविद्युत् क्षमताको केवल २० प्रतिशत मात्र उपयोग गर्न सकेको भए, आज नेपाल दक्षिण एसियाको सबैभन्दा धनी देशहरूमध्ये एक हुने थियो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>समस्या प्राकृतिक स्रोतको अभाव होइन — समस्या राजनीतिक इच्छाशक्तिको कमी, नीतिगत अस्थिरता र लगानी वातावरणको असुरक्षा हो। हरेक सरकार आउँदा ठूला जलविद्युत् परियोजनाको प्रतिबद्धता जनाउँछ, जाँदा अनुमतिपत्रको अस्तव्यस्तता छोडेर जान्छ। यस्तो नीतिगत अनिश्चितताले विदेशी लगानीकर्ता हच्किएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>भारत र बङ्गलादेशमा विद्युत् माग तीव्र गतिमा बढिरहेको छ। नेपालले दीर्घकालीन बिजुली खरिद सम्झौता (PPA) अन्तर्गत दुवै देशमा निर्यात गर्न सक्छ। यो केवल विद्युत् बेच्ने कुरा होइन — यो नेपालको भूराजनीतिक स्थितिलाई आर्थिक शक्तिमा परिणत गर्ने अवसर हो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अब आवश्यकता छ — एउटा दीर्घकालीन राष्ट्रिय ऊर्जा नीति जो सरकार परिवर्तन भएपनि नबदलिओस्। जलविद्युत् परियोजनाहरूलाई फास्ट ट्र्याकमा लैजाने, पर्यावरणीय जिम्मेवारी सहितको लगानी प्रोत्साहन गर्ने र स्थानीय समुदायलाई लाभको हिस्सेदार बनाउने नीति बनाउनुपर्छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपालसँग ८३ हजार मेगावाट जलविद्युत् उत्पादन क्षमता छ तर हाल हामी मात्र ३ हजार मेगावाट उत्पादन गरिरहेका छौं।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-hydropower-potential-real-door-to-economic-transformation]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-25 13:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-25 13:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपालमा महिला नेतृत्व — सम्भावना र बाधाहरू]]></title>
+<link>http://localhost:8080/women-leadership-nepal-possibilities-barriers/</link>
+<pubDate>Thu, 26 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="opinion"><![CDATA[विचार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/325/800/450" alt="नेपालमा महिला नेतृत्व" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपालको संविधानले महिलाका लागि ३३ प्रतिशत आरक्षणको व्यवस्था गरेको छ र यो आफैंमा ऐतिहासिक प्रगति हो। तर कागजमा भएका अधिकारहरू व्यवहारमा पूर्णतः कार्यान्वयन नभएको यथार्थ पनि छ। राजनीतिक दलहरूले महिलालाई चुनाव जित्न सक्ने निर्वाचन क्षेत्रमा उम्मेदवारी दिने तुलनामा समानुपातिक सूचीमा राख्ने प्रवृत्ति अझ बलियो छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>व्यावसायिक क्षेत्रमा भने उत्साहजनक परिवर्तन देखिँदैछ। बैंकिङ, स्वास्थ्य, शिक्षा र प्रविधि क्षेत्रमा महिला नेतृत्वको उपस्थिति बढेको छ। युवा महिला उद्यमीहरू स्टार्टअप क्षेत्रमा उल्लेखनीय योगदान दिइरहेका छन्। यो परिवर्तन क्रमशः मात्र भइरहेको छ र यसको गति बढाउनुपर्ने आवश्यकता छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सांस्कृतिक अपेक्षाहरू, पारिवारिक जिम्मेवारीको असमान बोझ र सामाजिक रूढिवादिताले महिला नेतृत्वमा बाधा पुर्याउने काम गरिरहेको छ। घरेलु हिंसा, यौन उत्पीडन र कार्यस्थलमा भेदभावका घटनाले महिलाको पेशागत यात्रालाई कठिन बनाउँछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>समाधानको बाटो बहुआयामिक छ — पुरुष पनि घरायसी काममा बराबर साझेदार बन्नुपर्छ, कार्यस्थलमा लैंगिक समानताका नीति कार्यान्वयन हुनुपर्छ र बालिकाहरूलाई बचपनैदेखि नेतृत्व सीप सिकाउने शिक्षा दिनुपर्छ। नेपालको भविष्य महिला र पुरुष दुवैको सहभागितामा निर्भर छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपालको संविधानले महिलाका लागि ३३ प्रतिशत आरक्षणको व्यवस्था गरेको छ तर कागजमा भएका अधिकारहरू व्यवहारमा पूर्णतः कार्यान्वयन नभएको यथार्थ पनि छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[women-leadership-nepal-possibilities-barriers]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-26 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-26 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== अन्तर्राष्ट्रिय (international) ===================== -->
+
+<item>
+<title><![CDATA[भारत-पाकिस्तान तनाव नयाँ उचाइमा — दक्षिण एसियामा अस्थिरताको खतरा]]></title>
+<link>http://localhost:8080/india-pakistan-tension-south-asia-instability-risk/</link>
+<pubDate>Fri, 27 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="international"><![CDATA[अन्तर्राष्ट्रिय]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/326/800/450" alt="भारत-पाकिस्तान तनाव" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>काश्मीरमा भएको ताजा सीमा उल्लंघनको घटनापछि भारत र पाकिस्तानबीचको कूटनीतिक तनाव नयाँ उचाइमा पुगेको छ। दुवै देशले आ-आफ्ना राजदूत फिर्ता बोलाएका छन् र व्यापार सम्बन्ध स्थगन गरेका छन्। संयुक्त राष्ट्रसंघले दुवै देशलाई संयम अपनाउन आग्रह गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल र अन्य दक्षिण एसियाली देशहरूले यस तनावबाट प्रत्यक्ष प्रभाव पर्ने चिन्ता व्यक्त गरेका छन्। क्षेत्रीय व्यापार, पर्यटन र लगानीमा अनिश्चितता बढेको छ। SAARC को आसन्न शिखर सम्मेलनमा यो घटनाको छाया पर्ने देखिन्छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अमेरिका र चीन दुवैले मध्यस्थता प्रस्ताव गरेका छन् तर दुवैको प्रस्ताव अर्को पक्षका लागि स्वीकार्य छैन। युरोपेली संघले द्विपक्षीय वार्ता पुनः सुरु गर्न आग्रह गरेको छ। परमाणु शक्ति सम्पन्न दुई देशबीचको यस्तो तनावलाई विश्व समुदायले गम्भीरतापूर्वक लिइरहेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल सरकारले दुवै छिमेकीसँग मैत्रीपूर्ण सम्बन्ध राखेको र दुवैलाई शान्तिपूर्ण वार्ताको बाटो अपनाउन आग्रह गर्ने नेपालको परम्परागत नीति कायम रहनेछ भन्दै परराष्ट्र मन्त्रालयको आधिकारिक बयान आएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[काश्मीरमा भएको ताजा सीमा उल्लंघनको घटनापछि भारत र पाकिस्तानबीचको कूटनीतिक तनाव नयाँ उचाइमा पुगेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[india-pakistan-tension-south-asia-instability-risk]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-27 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-27 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[विश्व अर्थतन्त्रमा मन्दीको आँधी — नेपालमा कस्तो असर?]]></title>
+<link>http://localhost:8080/global-recession-fears-impact-on-nepal/</link>
+<pubDate>Sat, 28 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="international"><![CDATA[अन्तर्राष्ट्रिय]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/327/800/450" alt="विश्व अर्थतन्त्रमा मन्दी र नेपाल" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>अमेरिका र युरोपेली अर्थतन्त्रमा मन्दीका संकेत देखिन थालेसँगै विश्व अर्थतन्त्रमा अनिश्चितता बढेको छ। IMF ले विश्व आर्थिक वृद्धिको अनुमान घटाएको छ। विशेष गरी युरोजोन र अमेरिकाको उपभोक्ता खर्चमा कमी आएको, ब्याज दर उच्च रहेको र व्यापार युद्धको तनाव जारी रहेको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपालका लागि यसको प्रत्यक्ष असर रेमिट्यान्समा पर्न सक्छ। खाडी र मलेसिया बाहेक अमेरिका र युरोपमा रहेका नेपाली श्रमिकहरूको रोजगार प्रभावित भएमा नेपाल आउने पैसा घट्नेछ। पर्यटन क्षेत्रमा पनि पश्चिमी देशका पर्यटकहरूको संख्या घट्न सक्छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अर्कोतर्फ, भारतको अर्थतन्त्र अपेक्षाकृत बलियो देखिएको हुँदा नेपाल-भारत व्यापारमा ठूलो झट्का नआउन सक्छ। नेपाल राष्ट्र बैंकले विदेशी मुद्रा सञ्चितिलाई सुरक्षित स्तरमा कायम राख्न विशेष ध्यान दिइरहेको बताएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अर्थविद्हरूले भने — नेपालले अब बाह्य झट्काबाट बच्न आन्तरिक उत्पादन र स्वदेशी बजार विस्तारमा ध्यान दिनु जरुरी भएको छ। विदेशी आर्थिक उतारचढावमा नेपाल यति संवेदनशील भइरहनु नेपालको संरचनात्मक कमजोरी हो।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[अमेरिका र युरोपेली अर्थतन्त्रमा मन्दीका संकेत देखिन थालेसँगै विश्व अर्थतन्त्रमा अनिश्चितता बढेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[global-recession-fears-impact-on-nepal]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-28 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-28 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[जलवायु परिवर्तन सम्मेलन COP30 मा नेपालको सशक्त आवाज]]></title>
+<link>http://localhost:8080/cop30-climate-conference-nepal-strong-voice/</link>
+<pubDate>Sun, 29 Jun 2025 12:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="international"><![CDATA[अन्तर्राष्ट्रिय]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/328/800/450" alt="COP30 मा नेपालको आवाज" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>ब्राजिलमा भएको COP30 जलवायु परिवर्तन सम्मेलनमा नेपालले हिमाली राष्ट्रहरूको प्रतिनिधिका रूपमा सशक्त आवाज उठाएको छ। नेपालका प्रधानमन्त्रीले सम्मेलनमा सम्बोधन गर्दै जलवायु परिवर्तनका कारण पग्लँदै गएका ग्लेसियरहरूले नेपाल र तल्लो क्षेत्रका लाखौँ मान्छेको जीवन खतरामा पारेको बताए।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपालले विकसित देशहरूले कार्बन उत्सर्जन घटाउन आफ्नो प्रतिबद्धता पूरा गर्नुपर्ने र जलवायु क्षतिपूर्ति कोषमा पर्याप्त योगदान दिनुपर्ने माग गरेको छ। लस एन्ड डेम्याज (Loss and Damage) फन्डमा थप रकम राख्न विकसित देशलाई दबाब दिने नेपालको लक्ष्य रहेको थियो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपालले सम्मेलनमा माउन्ट एभरेस्ट क्षेत्रका हालका तस्बिरहरू प्रस्तुत गरेर विश्व नेताहरूलाई नेपालका ग्लेसियरहरू कति द्रुत गतिमा पग्लिरहेका छन् भनेर देखायो। यो प्रस्तुतिले सम्मेलनमा ठूलो ध्यान आकर्षण गर्यो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सम्मेलनको अन्तिम घोषणापत्रमा हिमाली देशहरूका लागि विशेष जलवायु कोष स्थापना गर्ने उल्लेख गरिएको छ। नेपाल यस निर्णयबाट लाभान्वित हुने अपेक्षा गरिएको छ। वार्ता टोलीले गरेको कूटनीतिक प्रयासलाई देशभित्र सराहना गरिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[COP30 जलवायु परिवर्तन सम्मेलनमा नेपालले हिमाली राष्ट्रहरूको प्रतिनिधिका रूपमा सशक्त आवाज उठाएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[cop30-climate-conference-nepal-strong-voice]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-29 12:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-29 12:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== English ===================== -->
+
+<item>
+<title><![CDATA[Nepal's Tech Startup Scene Attracts International Investors]]></title>
+<link>http://localhost:8080/nepal-tech-startup-attracts-international-investors/</link>
+<pubDate>Mon, 02 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="english"><![CDATA[English]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/329/800/450" alt="Nepal's Tech Startup Scene Attracts International Investors" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>Nepal's technology startup ecosystem is experiencing unprecedented growth, drawing the attention of international venture capital firms and angel investors. Kathmandu-based startups in the fintech, agritech and edtech sectors have collectively raised over $50 million in foreign investment in the past two years — a figure that would have seemed impossible a decade ago.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Key factors driving this growth include an expanding internet user base, a young and increasingly tech-savvy population, and a favorable regulatory environment that allows foreign ownership in tech ventures. The government's Digital Nepal Framework, launched in 2019 and continuously updated since, has provided a clear policy roadmap that investors appreciate.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Among the notable startups making waves are Fonepay, which has revolutionized digital payments across the country, and a handful of agricultural technology firms helping farmers access market information and weather forecasts through mobile apps. One edtech company recently secured $5 million from a Singapore-based fund to expand its vernacular-language learning platform beyond Nepal into other South Asian markets.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Challenges remain, including limited access to early-stage seed funding, a shortage of experienced product managers and business development professionals, and the ongoing brain drain of top tech talent to companies in India, the US and Australia. The Nepal government is working on a revised startup policy that would offer tax incentives for investors who fund early-stage Nepali ventures, potentially addressing some of these systemic issues.</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[Nepal's technology startup ecosystem is experiencing unprecedented growth, drawing the attention of international venture capital firms and angel investors.]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-tech-startup-attracts-international-investors]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-02 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-02 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[Trekking Tourism in Nepal Rebounds to Pre-Pandemic Levels]]></title>
+<link>http://localhost:8080/nepal-trekking-tourism-rebounds-pre-pandemic-levels/</link>
+<pubDate>Wed, 04 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="english"><![CDATA[English]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/330/800/450" alt="Trekking Tourism in Nepal Rebounds" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>Nepal's trekking and adventure tourism sector has fully rebounded to pre-pandemic levels, with the Nepal Tourism Board reporting over 1.2 million international visitors in the first five months of 2025 — a record for that period. The Annapurna Circuit, Everest Base Camp and Langtang Valley remain the most popular trekking routes, but there is growing interest in off-the-beaten-path destinations such as the Dolpo, Tsum Valley and the emerging Kanchenjunga region.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>The comeback has been driven by a combination of factors: aggressive international marketing campaigns by the government, improved infrastructure including new lodges and upgraded trail signage, and growing global interest in slow travel and immersive cultural experiences. Nepal's relatively affordable cost compared to comparable trekking destinations in Europe and South America also plays a significant role.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>However, the surge in visitors has also rekindled concerns about overtourism and environmental degradation, particularly on the popular Everest corridor. The government introduced a permit requirement for Everest Base Camp trekkers last year, and conservationists are calling for similar measures on other heavily trafficked routes to prevent trail erosion, waste accumulation and disruption of wildlife habitats.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Local community lodges and teahouses, the backbone of Nepal's trekking economy, have reported near-full occupancy through the spring season. Guides and porters, who suffered severely during the pandemic years, are now finding steady work. The Nepal Mountaineering Association is pushing for stronger protections and fair wage standards for all workers in the trekking sector.</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[Nepal's trekking and adventure tourism sector has fully rebounded to pre-pandemic levels, with the Nepal Tourism Board reporting over 1.2 million international visitors in the first five months of 2025.]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-trekking-tourism-rebounds-pre-pandemic-levels]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-04 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-04 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[Nepal's Renewable Energy Ambitions: Can the Nation Power Its Neighbors?]]></title>
+<link>http://localhost:8080/nepal-renewable-energy-ambitions-power-neighbors/</link>
+<pubDate>Fri, 06 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="english"><![CDATA[English]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/331/800/450" alt="Nepal Renewable Energy Ambitions" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>With an estimated 83,000 megawatts of technically feasible hydropower potential — making it one of the richest nations in the world for water-based energy — Nepal has long been described as the "water tower of Asia." Yet for decades, the country has struggled to convert this natural advantage into economic prosperity. That may finally be changing. In 2025, Nepal's installed hydropower capacity crossed the 3,500 MW milestone, and the government has set an ambitious target of 28,000 MW by 2035.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>The key to achieving this target lies not just in building more dams, but in securing long-term power purchase agreements (PPAs) with neighboring countries. Nepal has already begun exporting power to India, and the recently signed Energy Cooperation Framework with Bangladesh opens the door to tripartite energy trade. Experts say that if Nepal can successfully position itself as a renewable energy hub for South Asia, it could fundamentally transform its economic profile within a generation.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Private sector investment is picking up, with several major projects attracting financing from the Asian Development Bank, World Bank and domestic commercial banks. Solar energy is also gaining traction, particularly in the Terai region, where flat terrain and high solar irradiance make utility-scale solar farms viable. The government is targeting 500 MW of solar capacity by 2027 to complement hydropower, which fluctuates seasonally.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Critics point to persistent challenges: political instability causing regulatory uncertainty, land acquisition disputes, and the slow pace of transmission infrastructure development. Building the cross-border transmission lines needed to export power at scale requires diplomatic coordination and significant capital. Despite these hurdles, there is genuine optimism among energy economists that Nepal is finally moving from potential to performance in this critical sector.</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[Nepal has long been described as the "water tower of Asia" with an estimated 83,000 megawatts of technically feasible hydropower potential.]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-renewable-energy-ambitions-power-neighbors]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-06 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-06 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[Nepal Pushes for Greater Representation in International Financial Institutions]]></title>
+<link>http://localhost:8080/nepal-greater-representation-international-financial-institutions/</link>
+<pubDate>Sun, 08 Jun 2025 13:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="english"><![CDATA[English]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/332/800/450" alt="Nepal Greater Representation International Financial Institutions" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>Nepal's finance ministry has submitted a formal proposal to the International Monetary Fund and World Bank calling for stronger representation of least-developed and landlocked developing nations in the governance structures of these institutions. The proposal, co-signed by 12 other similarly situated countries, argues that current voting structures disproportionately favor wealthy nations whose economic challenges are fundamentally different from those faced by countries like Nepal.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>The Nepali government's submission highlights three specific areas for reform: greater voice in setting global financial standards that affect developing nations, access to concessional financing on longer terms, and the creation of a dedicated facility for climate-vulnerable landlocked countries that face unique challenges in accessing international capital markets.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>Finance Secretary Dr. Ramesh Paudel, who presented Nepal's case at the IMF Spring Meetings, said the current system was designed for a post-World War II world that no longer exists. "The challenges of 2025 — climate change, digital economies, pandemic resilience — require governance structures that reflect the realities of all nations, not just the major powers," he said.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>The proposal has received cautious support from some European and Nordic member states of both institutions, who have historically championed reform of multilateral governance. While wholesale reform of these entrenched institutions is unlikely in the near term, observers say the persistent advocacy by coalitions of developing nations has gradually shifted the conversation and led to incremental improvements in recent years. Nepal's active participation in this coalition signals a more assertive approach to international economic diplomacy.</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[Nepal's finance ministry has submitted a formal proposal to the IMF and World Bank calling for stronger representation of least-developed and landlocked developing nations.]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-greater-representation-international-financial-institutions]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-08 13:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-08 13:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== ब्रेकिङ (breaking) ===================== -->
+
+<item>
+<title><![CDATA[ब्रेकिङ: काठमाडौंमा ४.५ म्याग्निच्युडको भूकम्प]]></title>
+<link>http://localhost:8080/breaking-kathmandu-earthquake-4-5-magnitude/</link>
+<pubDate>Mon, 09 Jun 2025 14:22:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="breaking"><![CDATA[ब्रेकिङ]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/333/800/450" alt="काठमाडौंमा भूकम्प" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>अद्यावधिक: काठमाडौं उपत्यकामा आज दिउँसो २ बजेर २२ मिनेटमा ४.५ म्याग्निच्युडको भूकम्पको धक्का महसुस भएको छ। राष्ट्रिय भूकम्प मापन केन्द्रका अनुसार, भूकम्पको केन्द्रविन्दु काठमाडौंको उत्तर-पूर्वमा ८ किलोमिटर गहिराइमा रहेको थियो। केही भवनहरूमा सानातिना दरार देखिएको र मानिसहरू खुला ठाउँमा निस्किएको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रारम्भिक खबरअनुसार, ठूलो क्षति भएको छैन। राष्ट्रिय विपद् जोखिम न्यूनीकरण तथा व्यवस्थापन प्राधिकरण (NDRRMA) ले सबै जिल्लासँग सम्पर्क राखिरहेको र स्थिति सामान्य रहेको बताएको छ। नागरिकहरूलाई शान्त रहन र भवनको संरचना जाँच नगरी भित्र नपस्न सतर्क गराइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल भूकम्पको उच्च जोखिम क्षेत्रमा पर्दछ। २०१५ को विनाशकारी भूकम्पको याद अझ मनसमा ताजा छ। त्यसबेला ९ हजारभन्दा बढीको ज्यान गएको थियो। विज्ञहरूले काठमाडौं उपत्यका र पूर्वी नेपालमा ठूलो भूकम्पको जोखिम अझ बाँकी रहेको बताउँछन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>हामी यस विषयमा थप जानकारी संकलन गरिरहेका छौं। अपडेटका लागि ABC Nepal TV को वेबसाइट र सोसल मिडिया च्यानलहरू फलो गर्नुहोला। यदि तपाईंले भूकम्पबाट कुनै क्षति देख्नु भएको छ भने NDRRMA को हटलाइन नम्बरमा सम्पर्क गर्नुहोला।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[काठमाडौं उपत्यकामा आज दिउँसो ४.५ म्याग्निच्युडको भूकम्पको धक्का महसुस भएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[breaking-kathmandu-earthquake-4-5-magnitude]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-09 14:22:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-09 14:22:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[ब्रेकिङ: सरकारले राष्ट्रिय आपातकाल घोषणा गर्न सक्ने — बाढी परिस्थिति गम्भीर]]></title>
+<link>http://localhost:8080/breaking-national-emergency-declaration-flood-crisis/</link>
+<pubDate>Tue, 10 Jun 2025 07:30:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="breaking"><![CDATA[ब्रेकिङ]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/334/800/450" alt="राष्ट्रिय आपातकाल बाढी परिस्थिति" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>लुम्बिनी र मधेश प्रदेशमा बाढीको परिस्थिति अत्यन्त गम्भीर बनेको छ। गृह मन्त्रालयका प्रवक्ताले सरकार राष्ट्रिय आपातकाल घोषणा गर्ने सम्भावना अध्ययन गरिरहेको बताएका छन्। राप्ती, नारायणी र कोसी नदीहरू खतराको सीमाभन्दा माथि बगिरहेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अहिलेसम्म प्राप्त जानकारीअनुसार, १५ जिल्लामा ३ लाखभन्दा बढी मानिस प्रभावित भएका छन्। १२ जनाको ज्यान गएको र ४ जना बेपत्ता रहेका छन्। हजारौँ घरपरिवारले आफ्नो घर छोडेर सुरक्षित ठाउँमा आश्रय लिएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सेना र सशस्त्र प्रहरीका ३ हजारभन्दा बढी जवानहरू उद्धार अभियानमा खटिएका छन्। हेलिकप्टरहरूले दुर्गम ठाउँमा अलपत्र परेका मानिसहरूलाई उद्धार गरिरहेका छन्। भारत सरकारले पनि उद्धारमा सहयोग गर्न एनडीआरएफको टोली पठाउने प्रस्ताव गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>आगामी २४ घण्टामा थप वर्षाको पूर्वानुमान गरिएकाले परिस्थिति थप बिग्रन सक्छ। नागरिकहरूलाई नदी किनार र निम्न तटीय क्षेत्र तत्काल छोड्न आग्रह गरिएको छ। ABC Nepal TV ले यस विषयको लाइभ अपडेट जारी राखेको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[लुम्बिनी र मधेश प्रदेशमा बाढीको परिस्थिति अत्यन्त गम्भीर बनेको छ र सरकारले राष्ट्रिय आपातकाल घोषणा गर्न सक्ने।]]></excerpt:encoded>
+<wp:post_name><![CDATA[breaking-national-emergency-declaration-flood-crisis]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-10 07:30:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-10 07:30:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[ब्रेकिङ: संसद् विघटन घोषणा — मध्यावधि निर्वाचनतर्फ]]></title>
+<link>http://localhost:8080/breaking-parliament-dissolution-midterm-election/</link>
+<pubDate>Wed, 11 Jun 2025 16:45:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="breaking"><![CDATA[ब्रेकिङ]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/335/800/450" alt="संसद् विघटन घोषणा" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>राष्ट्रपति कार्यालयले प्रधानमन्त्रीको सिफारिसमा प्रतिनिधि सभा विघटन गर्ने र मध्यावधि निर्वाचन घोषणा गर्ने निर्णयको जानकारी दिएको छ। संसद्मा अविश्वास प्रस्ताव विफल भएको दुई दिनपछि प्रधानमन्त्रीले यो ऐतिहासिक कदम चालेका हुन्। मध्यावधि निर्वाचन कात्तिकमा हुने सम्भावना रहेको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>विपक्षी दलहरूले यो निर्णयलाई असंवैधानिक र लोकतान्त्रिक मर्यादाविरुद्ध भनेका छन् र सर्वोच्च अदालतमा रिट दायर गर्ने घोषणा गरेका छन्। सत्तारुढ दलका नेताहरूले भने यो संवैधानिक प्रक्रियाअनुसार भएको बताएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>संवैधानिक कानुन विशेषज्ञहरू निर्णयको वैधानिकतामा विभाजित छन्। केहीले यो संविधानको धारा ७६ को प्रावधानअनुसार उचित भनेका छन् भने अरूले निर्वाचन तुरुन्तै गर्न नसकिने व्यावहारिक कारण औँल्याएका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>निर्वाचन आयोगले मध्यावधि निर्वाचनका लागि तयारी सुरु गर्ने बताएको छ तर आवश्यक बजेट र समय दुवैको चुनौती रहेको जनाएको छ। राजनीतिक दलहरूले आफ्नो रणनीति निर्धारण गर्न आन्तरिक बैठकहरू बोलाएका छन्। देशमा राजनीतिक तापक्रम तीव्र रूपमा बढेको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[राष्ट्रपति कार्यालयले प्रधानमन्त्रीको सिफारिसमा प्रतिनिधि सभा विघटन गर्ने र मध्यावधि निर्वाचन घोषणा गर्ने निर्णयको जानकारी दिएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[breaking-parliament-dissolution-midterm-election]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-11 16:45:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-11 16:45:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== प्रदेश / Province categories ===================== -->
+
+<item>
+<title><![CDATA[कर्णाली प्रदेशमा नयाँ स्वास्थ्य अस्पताल उद्घाटन — दुर्गम क्षेत्रका बासिन्दाले पाए राहत]]></title>
+<link>http://localhost:8080/karnali-new-hospital-inauguration-remote-residents-relief/</link>
+<pubDate>Mon, 16 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_karnali"><![CDATA[कर्णाली]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/336/800/450" alt="कर्णाली प्रदेशमा नयाँ स्वास्थ्य अस्पताल" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>कर्णाली प्रदेशको जुम्ला जिल्लामा ५० शैयाको नयाँ जिल्ला अस्पताल उद्घाटन भएको छ। यो अस्पतालले कर्णालीका दुर्गम जिल्लाहरूका लाखौँ बासिन्दालाई नजिकै स्वास्थ्य सेवा प्राप्त गर्ने अवसर दिलाउनेछ। हालसम्म यहाँका बिरामीहरू सुर्खेत वा नेपालगञ्जसम्म उपचारका लागि जानुपर्थ्यो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>अस्पतालमा आधुनिक शल्यक्रिया कक्ष, एक्स-रे र अल्ट्रासाउन्ड सुविधा, प्रसुति वार्ड र ICU उपलब्ध छ। दस जना विशेषज्ञ चिकित्सक र ३० जना स्वास्थ्यकर्मी नियुक्त गरिएका छन्। स्वास्थ्य मन्त्रालयले यो अस्पताललाई कर्णालीको मेडिकल हब बनाउने लक्ष्य राखेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>स्थानीय बासिन्दाहरूले यो उद्घाटनलाई दशकौंको प्रतीक्षाको अन्त्य भनेर भावुक रूपमा स्वागत गरेका छन्। ७० वर्षका एक वृद्धले भने — मेरो जीवनमा यत्तिको ठूलो खुशी कमै आएको छ। अब बिरामी परे मलाई हेलिकप्टरमा जानु पर्दैन।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>कर्णाली प्रदेश सरकारले अस्पताललाई सौर्य ऊर्जाबाट सञ्चालन गर्ने व्यवस्था मिलाएको छ जसले बिजुलीको अनिश्चितताको समस्या हल हुनेछ। आगामी दुई वर्षमा थप पाँच जिल्लामा यस्तै स्वास्थ्य सेवा केन्द्र स्थापना गर्ने योजना रहेको प्रदेश स्वास्थ्य मन्त्रीले बताए।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[कर्णाली प्रदेशको जुम्ला जिल्लामा ५० शैयाको नयाँ जिल्ला अस्पताल उद्घाटन भएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[karnali-new-hospital-inauguration-remote-residents-relief]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-16 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-16 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[कोशी प्रदेशमा बाढी पहिरोले ठूलो क्षति — तत्काल राहतको माग]]></title>
+<link>http://localhost:8080/koshi-flood-landslide-damage-relief-demand/</link>
+<pubDate>Tue, 17 Jun 2025 08:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_koshi"><![CDATA[कोशी]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/337/800/450" alt="कोशी प्रदेशमा बाढी पहिरो" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>कोशी प्रदेशका पहाडी जिल्लाहरूमा गत दुई दिनको अविरल वर्षाले बाढी र पहिरोले ठूलो क्षति पुर्याएको छ। संखुवासभा, तेह्रथुम र ताप्लेजुङमा सयौँ घर क्षतिग्रस्त भएका छन् र दर्जनौँ परिवार विस्थापित भएका छन्। कोशी नदीको मुख्य शाखाहरूमा पानीको सतह खतरानाक रूपमा बढेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रदेश सरकारले तत्काल राहत कार्य सुरु गरेको छ। स्थानीय सांसदहरूले केन्द्र सरकारसमक्ष थप राहत रकम माग गरेका छन्। प्रदेश प्रमुखले घटनास्थलको भ्रमण गरी पीडितहरूसँग भेटवार्ता गरेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सबैभन्दा बढी प्रभावित क्षेत्रमा खाद्यान्न, औषधि र खानेपानीको अभाव भएको बताइएको छ। पहिरोले केही सडकहरू अवरुद्ध भएका हुँदा राहत सामग्री ढुवानी गर्न कठिनाई भइरहेको छ। सेनाले हेलिकप्टरबाट राहत सामग्री पठाउन थालेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>विकास निर्माणका विज्ञहरूले पहिरो जोखिम क्षेत्रमा भएको अव्यवस्थित बसोबास र डाँडाकाँडामा भएको अन्धाधुन्ध वनफँडानीलाई यस्ता प्राकृतिक विपद्को मुख्य कारण बताएका छन्। दीर्घकालीन समाधानका लागि जोखिम क्षेत्रबाट बसोबास स्थानान्तरण अपरिहार्य भएको उनीहरूको सुझाव छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[कोशी प्रदेशका पहाडी जिल्लाहरूमा गत दुई दिनको अविरल वर्षाले बाढी र पहिरोले ठूलो क्षति पुर्याएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[koshi-flood-landslide-damage-relief-demand]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-17 08:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-17 08:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[गण्डकी प्रदेशले पर्यटन पूर्वाधार विकासका लागि ५ अर्बको योजना ल्यायो]]></title>
+<link>http://localhost:8080/gandaki-tourism-infrastructure-5-billion-plan/</link>
+<pubDate>Wed, 18 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_gandaki"><![CDATA[गण्डकी]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/338/800/450" alt="गण्डकी प्रदेशको पर्यटन पूर्वाधार विकास" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>गण्डकी प्रदेश सरकारले पर्यटन पूर्वाधार विकासका लागि ५ अर्ब रुपैयाँको विशेष योजना सार्वजनिक गरेको छ। यो योजनाअन्तर्गत पोखरा-मनाङ राजमार्गको स्तरोन्नति, अन्नपूर्ण ट्रेकिङ मार्गमा नयाँ पर्यटकीय सुविधा केन्द्रहरूको निर्माण र मुस्ताङमा सांस्कृतिक पर्यटन कार्यक्रम विस्तार गरिनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रदेश पर्यटन मन्त्रीले भने — गण्डकी प्रदेशसँग विश्वका सर्वोत्कृष्ट प्राकृतिक सम्पदाहरू छन्। माछापुच्छ्रे, धौलागिरि, अन्नपूर्ण — यी हाम्रा ब्राण्डहरू हुन्। अब हामीले पर्यटकलाई केवल ट्रेकिङ नभई सांस्कृतिक, साहसिक र कल्याणकारी पर्यटनको अनुभव दिनुपर्छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>पोखरा अन्तर्राष्ट्रिय विमानस्थलले अझ थप अन्तर्राष्ट्रिय उडानहरू ल्याउने लक्ष्य राखिएको छ। हाल खाडी देशहरू र चीनबाट मात्र सिधा उडान उपलब्ध छ, युरोप र अमेरिकाबाट पनि उडान जोड्ने प्रयास भइरहेको बताइएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>स्थानीय व्यवसायी र होटल संघले यो योजनालाई उत्साहका साथ स्वागत गरेका छन्। कोभिड पश्चात् पर्यटन क्षेत्र तीव्र गतिमा उठिरहेको बेला यो लगानीले गण्डकीलाई दक्षिण एसियाको प्रिमियर पर्यटन गन्तव्यको रूपमा स्थापित गर्न मद्दत गर्नेछ भन्ने विश्वास व्यक्त गरिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[गण्डकी प्रदेश सरकारले पर्यटन पूर्वाधार विकासका लागि ५ अर्ब रुपैयाँको विशेष योजना सार्वजनिक गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[gandaki-tourism-infrastructure-5-billion-plan]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-18 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-18 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[बागमती प्रदेशले खानेपानी संकट समाधानका लागि नयाँ जलाधार परियोजना सुरु गर्यो]]></title>
+<link>http://localhost:8080/bagmati-water-crisis-new-reservoir-project/</link>
+<pubDate>Thu, 19 Jun 2025 09:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_bagmati"><![CDATA[बागमती]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/339/800/450" alt="बागमती प्रदेशको खानेपानी परियोजना" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>काठमाडौं उपत्यकाको पुरानो खानेपानी संकट समाधानका लागि बागमती प्रदेश सरकारले मेलम्ची परियोजनाभन्दा माथि रहेको मेलम्ची उपल्लो जलाधार क्षेत्रमा नयाँ भण्डारण र शुद्धिकरण संयन्त्र निर्माण सुरु गरेको छ। यो परियोजना सम्पन्न भएपछि उपत्यकाका नागरिकहरूलाई प्रतिदिन थप ५ करोड लिटर खानेपानी आपूर्ति गर्न सकिनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>काठमाडौं उपत्यकाको जनसंख्या ४० लाख नाघिसकेको छ तर खानेपानी आपूर्ति व्यवस्था पुरानो ढाँचामै रहेको छ। मेलम्ची प्रथम चरण सञ्चालनमा आए पनि बारम्बार पाइपलाइनमा क्षति र बाढीका कारण आपूर्ति अनियमित रहेको छ। यो नयाँ परियोजनाले त्यो समस्यालाई दीर्घकालीन रूपमा हल गर्ने अपेक्षा राखिएको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>खानेपानी विज्ञहरूले भने — काठमाडौंको खानेपानी समस्या केवल परिमाणको होइन, गुणस्तरको पनि हो। भूमिगत जल प्रदूषित भइसकेको र सतहीय जलमा अवसाद बढेको छ। आधुनिक शुद्धिकरण संयन्त्र अत्यन्त आवश्यक थियो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>परियोजना तीन वर्षमा सम्पन्न गर्ने लक्ष्य राखिएको छ। जलवायु अनुकूल पूर्वाधार डिजाइन, सौर्य ऊर्जा र बर्षाको पानी संकलनका थप प्रणालीहरू यस परियोजनाका विशेषता हुनेछन्। एडीबीको सहसहयोगमा कार्यान्वयन हुने यो परियोजनाको कुल लागत ३ अर्ब रुपैयाँ रहेको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[बागमती प्रदेश सरकारले काठमाडौं उपत्यकाको खानेपानी संकट समाधानका लागि नयाँ जलाधार परियोजना सुरु गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[bagmati-water-crisis-new-reservoir-project]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-19 09:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-19 09:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[मधेश प्रदेशमा कृषि यान्त्रिकीकरण अभियान — किसानको आय दोब्बर बनाउने लक्ष्य]]></title>
+<link>http://localhost:8080/madesh-agricultural-mechanisation-double-farmer-income/</link>
+<pubDate>Fri, 20 Jun 2025 11:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_madesh"><![CDATA[मधेश]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/340/800/450" alt="मधेश प्रदेशमा कृषि यान्त्रिकीकरण" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>मधेश प्रदेश सरकारले कृषि क्षेत्रमा यान्त्रिकीकरण बढाउने व्यापक अभियान सुरु गरेको छ। अभियानअन्तर्गत ट्र्याक्टर, हार्भेस्टर र अन्य आधुनिक कृषि उपकरण खरिदमा ५० प्रतिशत सहुलियत दिने र सहकारी आधारमा यन्त्र बैंक स्थापना गर्ने कार्यक्रम रहेको छ। लक्ष्य — पाँच वर्षमा किसानको औसत आय दोब्बर बनाउने।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>मधेश प्रदेश नेपालको खाद्यान्न भण्डार हो। यहाँको उर्वर भूमि र नहरीकरण प्रणालीले धान, गहुँ र मकैको प्रशस्त उत्पादन सम्भव छ। तर परम्परागत खेतीका कारण उत्पादकता अझ बढाउन सकिएको छैन। यान्त्रिकीकरणले श्रम लागत घटाउने र प्रति हेक्टर उत्पादन बढाउने अपेक्षा छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>किसान समूहका प्रतिनिधिले सहुलियत र्ऋण र तालिमको माग थप गरे। उनीहरूले भने — हामीलाई उपकरण मात्र दिएर हुँदैन, त्यसको मर्मत-सम्भार र सञ्चालनमा पनि सहयोग चाहिन्छ। सरकारी प्राविधिक टोलीले गाउँ-गाउँमा पुगेर किसानलाई प्रत्यक्ष प्रशिक्षण दिने व्यवस्था भए राम्रो हुन्थ्यो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>प्रदेश कृषि मन्त्रीले भने — यो कार्यक्रम नेपालले खाद्य सुरक्षा हासिल गर्ने र कृषि निर्यात बढाउने दीर्घकालीन योजनाको हिस्सा हो। भारतको सीमावर्ती बजारसँग नजिक रहेको मधेशको भौगोलिक फाइदा लिँदै कृषि व्यापार बढाउनेछौं।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[मधेश प्रदेश सरकारले कृषि क्षेत्रमा यान्त्रिकीकरण बढाउने व्यापक अभियान सुरु गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[madesh-agricultural-mechanisation-double-farmer-income]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-20 11:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-20 11:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[लुम्बिनी प्रदेशमा बौद्ध सर्किट विकास — अन्तर्राष्ट्रिय तीर्थाटनको गन्तव्य बनाउने योजना]]></title>
+<link>http://localhost:8080/lumbini-buddhist-circuit-international-pilgrimage-destination/</link>
+<pubDate>Sat, 21 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_lumbini"><![CDATA[लुम्बिनी]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/341/800/450" alt="लुम्बिनी बौद्ध सर्किट विकास" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>लुम्बिनी प्रदेश सरकारले बौद्ध तीर्थाटन पर्यटनलाई व्यवस्थित र दिगो बनाउन बौद्ध सर्किट विकास मास्टर प्लान ल्याएको छ। लुम्बिनी (गौतम बुद्धको जन्मस्थल), कपिलवस्तु र देवदह — तीनवटा पुरातात्त्विक क्षेत्रहरूलाई एकीकृत तीर्थाटन मार्गमा जोड्ने यो योजनाले थाइल्याण्ड, जापान, श्रीलंका र कोरियाबाट ठूलो संख्यामा तीर्थयात्री आकर्षित गर्ने लक्ष्य राखेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>लुम्बिनी विकास कोषका अनुसार, हाल वार्षिक ३ लाखभन्दा बढी बौद्ध तीर्थयात्री लुम्बिनी आउँछन् तर सेवा सुविधाको अभावले तिनीहरू एक दिनभन्दा बढी नबसी फर्किने गरेका छन्। उच्च गुणस्तरका ध्यान केन्द्र, धर्मशाला र सांस्कृतिक केन्द्र निर्माण गरिए तीर्थयात्रीको बसाइ बढ्ने र पर्यटकीय आय उल्लेखनीय बढ्ने अपेक्षा छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>बौद्ध देशहरूका दूतावासहरूले यो योजनामा रुचि देखाएका छन् र आफ्नो देशको सहयोग दिन इच्छुक रहेका छन्। जापान र थाइल्याण्डले पहिलेनै लुम्बिनीमा आफ्नो देशको बौद्ध मठ स्थापना गरिसकेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>UNESCO ले लुम्बिनीलाई विश्व सम्पदा सूचीमा राखेको छ र यसको संरक्षणमा सरकारको जिम्मेवारी ठूलो छ। विकासका काम गर्दा पुरातात्त्विक सम्पदाको संरक्षणलाई सर्वोच्च प्राथमिकता दिनुपर्ने विज्ञहरूले बताएका छन्।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[लुम्बिनी प्रदेश सरकारले बौद्ध तीर्थाटन पर्यटनलाई व्यवस्थित र दिगो बनाउन बौद्ध सर्किट विकास मास्टर प्लान ल्याएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[lumbini-buddhist-circuit-international-pilgrimage-destination]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-21 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-21 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[सुदूरपश्चिम प्रदेशमा सडक पूर्वाधार विस्तार — विकासबाट वञ्चित क्षेत्र जोडिँदै]]></title>
+<link>http://localhost:8080/sudurpashchim-road-infrastructure-expansion-remote-areas/</link>
+<pubDate>Sun, 22 Jun 2025 12:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="provincial_sudurpashchim"><![CDATA[सुदूरपश्चिम]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/342/800/450" alt="सुदूरपश्चिम प्रदेशमा सडक पूर्वाधार विस्तार" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>सुदूरपश्चिम प्रदेश सरकार र संघीय सरकारको साझा लगानीमा सुदूरपश्चिमको दुर्गम जिल्लाहरूलाई सदरमुकामसँग जोड्ने सडक विस्तार अभियान तीव्र बनाइएको छ। बाजुरा-मुगु सडक, हुम्ला-जुम्ला पुल र डार्चुला-दार्चेश्वरी सडक यस अभियानका मुख्य परियोजना हुन्। यी सडकहरू सम्पन्न भएपछि हजारौँ स्थानीय बासिन्दाको जीवनमा ठूलो परिवर्तन आउनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सुदूरपश्चिम नेपालको सबैभन्दा पिछडिएको क्षेत्र मानिन्छ। यहाँका मानव विकास सूचकांकहरू राष्ट्रिय औसतभन्दा धेरै तल छन्। सडक, बिजुली र इन्टरनेटको अभावले यहाँका युवाहरू बाध्य भएर काठमाडौं वा भारत तर्फ पलायन हुन्छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>निर्माण कार्यमा स्थानीय युवाहरूलाई रोजगारी दिइएको छ जसले दोहोरो फाइदा दिएको छ — सडक बन्दैछ र स्थानीयले काम पाएका छन्। एक स्थानीय युवाले भने — पहिले बाबा बिरामी परे हामी डोकोमा बोकेर सदरमुकाम पुग्थ्यौं, अब सडक बन्यो भने मोटरसाइकलमा जान पाइनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>विशेषज्ञहरूले सडकसँगै स्वास्थ्य र शिक्षाको पहुँच पनि सुनिश्चित गर्नुपर्ने जोड दिएका छन्। सडक एक्लैले विकास आउँदैन — सडकले नयाँ अवसरको ढोका खोल्छ, त्यो ढोकाबाट फाइदा उठाउने बाँकी काम पनि सरकारले गर्नुपर्छ भन्ने उनीहरूको मत छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[सुदूरपश्चिम प्रदेश सरकार र संघीय सरकारको साझा लगानीमा दुर्गम जिल्लाहरूलाई सदरमुकामसँग जोड्ने सडक विस्तार अभियान तीव्र बनाइएको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[sudurpashchim-road-infrastructure-expansion-remote-areas]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-22 12:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-22 12:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<!-- ===================== व्यापार (business) ===================== -->
+
+<item>
+<title><![CDATA[काठमाडौंमा नयाँ ट्रेड सेन्टर स्थापना — आयात-निर्यात सहजीकरणको आशा]]></title>
+<link>http://localhost:8080/kathmandu-new-trade-center-import-export-facilitation/</link>
+<pubDate>Mon, 23 Jun 2025 10:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="business"><![CDATA[व्यापार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/343/800/450" alt="काठमाडौंमा नयाँ ट्रेड सेन्टर" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>उद्योग वाणिज्य संघले काठमाडौंको सातदोबाटोमा नयाँ एकीकृत ट्रेड सेन्टर निर्माण गर्ने घोषणा गरेको छ। यो सेन्टरले नेपाली व्यवसायीहरूलाई अन्तर्राष्ट्रिय खरिदकर्ताहरूसँग भेट्ने ठाउँ, उत्पादन प्रदर्शनी स्थल र निर्यातसम्बन्धी सबै सरकारी सेवाहरू एकै छतमुनि उपलब्ध गराउनेछ। यो नेपालको व्यापार पूर्वाधारमा दशकमा भएको सबैभन्दा ठूलो एकल लगानी हो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल चेम्बर अफ कमर्सका अध्यक्षले भने — अहिले एउटा निर्यात कागजातका लागि व्यवसायीहरूले दस वटा कार्यालय धाउनुपर्छ। यो ट्रेड सेन्टरले सिंगल विन्डो सेवा दिनेछ जसले व्यापार लागत उल्लेखनीय घटाउनेछ। भारत, चीन र युरोपेली खरिदकर्ताहरूलाई स्थायी ठेगाना भएको ठाउँ दिन पनि यो आवश्यक थियो।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>ट्रेड सेन्टरमा हस्तकला, चाँदी आभूषण, चिया-कफी, पस्मिना र जडिबुटीका उत्पादनहरूका लागि विशेष प्रदर्शनी क्षेत्र राखिनेछ। डिजिटल बजार लिंकेजका लागि ई-कमर्स सहायता केन्द्र पनि हुनेछ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>सरकारले यो परियोजनालाई राष्ट्रिय प्राथमिकता सूचीमा राखेको छ र भूमि उपलब्ध गराएर सहयोग गर्ने बताएको छ। परियोजना दुई वर्षमा सम्पन्न हुने अपेक्षा राखिएको छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[उद्योग वाणिज्य संघले काठमाडौंको सातदोबाटोमा नयाँ एकीकृत ट्रेड सेन्टर निर्माण गर्ने घोषणा गरेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[kathmandu-new-trade-center-import-export-facilitation]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-23 10:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-23 10:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+<item>
+<title><![CDATA[नेपालमा लघुवित्त संस्थाहरूको ब्याजदर विवाद — ऋणीहरू पीडामा]]></title>
+<link>http://localhost:8080/nepal-microfinance-interest-rate-controversy-borrowers-suffer/</link>
+<pubDate>Tue, 24 Jun 2025 13:00:00 +0000</pubDate>
+<dc:creator><![CDATA[admin]]></dc:creator>
+<category domain="category" nicename="business"><![CDATA[व्यापार]]></category>
+<content:encoded><![CDATA[<!-- wp:image --><figure class="wp-block-image"><img src="https://picsum.photos/seed/344/800/450" alt="नेपालमा लघुवित्त ब्याजदर विवाद" /></figure><!-- /wp:image -->
+<!-- wp:paragraph --><p>नेपालका लघुवित्त संस्थाहरूले लिने उच्च ब्याजदरविरुद्ध ऋणीहरूको प्रदर्शन र गुनासो बढिरहेको छ। ग्रामीण क्षेत्रका महिला ऋणीहरूको एक समूहले नेपाल राष्ट्र बैंक अगाडि धर्ना दिए र वार्षिक ३०-३५ प्रतिशतसम्म पुगेको ब्याजदर तत्काल नियन्त्रण गर्न माग गरेका छन्। धेरैले ऋण चुकाउन नसकेर सम्पत्ति जफत भएको गुनासो गरेका छन्।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>लघुवित्त संस्थाहरूले भने — हाम्रो सञ्चालन लागत बैंकभन्दा धेरै उच्च हुन्छ किनकि हामी दुर्गम क्षेत्रमा पुग्नुपर्छ र सानासाना ऋण दिनुपर्छ। तसर्थ ब्याजदर अलि बढी हुनु स्वाभाविक हो। तर ब्याज ३० प्रतिशतभन्दा माथि जानु कुनै पनि हालतमा उचित छैन भन्ने आलोचकहरूको मत छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>नेपाल राष्ट्र बैंकले लघुवित्त संस्थाहरूको ब्याजदर २१ प्रतिशतमा सीमित गर्ने निर्देशन पहिलेनै जारी गरेको थियो तर कार्यान्वयन कमजोर रहेको बताइएको छ। नियामकले अहिले सबै संस्थाहरूको अनुगमन कडा बनाउने घोषणा गरेको छ।</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>वित्तीय समावेशीकरण विज्ञहरूले भने लघुवित्त आफैँ राम्रो विचार हो तर यसको दुरुपयोग रोक्नुपर्छ। निर्धन महिलाहरूलाई ऋणको पासोमा फसाउने होइन, उनीहरूलाई आर्थिक स्वतन्त्रताको बाटो देखाउने उद्देश्यले लघुवित्त काम गर्नुपर्छ।</p><!-- /wp:paragraph -->]]></content:encoded>
+<excerpt:encoded><![CDATA[नेपालका लघुवित्त संस्थाहरूले लिने उच्च ब्याजदरविरुद्ध ऋणीहरूको प्रदर्शन र गुनासो बढिरहेको छ।]]></excerpt:encoded>
+<wp:post_name><![CDATA[nepal-microfinance-interest-rate-controversy-borrowers-suffer]]></wp:post_name>
+<wp:post_date><![CDATA[2025-06-24 13:00:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-06-24 13:00:00]]></wp:post_date_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_type><![CDATA[post]]></wp:post_type>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:is_sticky>0</wp:is_sticky>
+</item>
+
+</channel>
+</rss>

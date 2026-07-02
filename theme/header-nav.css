@@ -1,0 +1,699 @@
+/* ============================================================
+   ABC Nepal TV — Header & Navigation
+   File: header-nav.css
+   Enqueue via functions.php:
+     wp_enqueue_style('abc-header-nav', get_template_directory_uri().'/header-nav.css');
+============================================================ */
+
+/* ── Reset / base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── CSS variables ── */
+:root {
+    --abc-red:        #c0392b;
+    --abc-red-dark:   #a93226;
+    --abc-navy:       #1a1a2e;
+    --abc-navy-light: #252545;
+    --abc-white:      #ffffff;
+    --abc-offwhite:   #f8f8f8;
+    --abc-gray:       #e8e8e8;
+    --abc-text:       #222222;
+    --abc-muted:      #666666;
+    --header-h:       68px;
+    --mobile-menu-w:  300px;
+    --ease-smooth:    cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce:    cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================================
+   SITE HEADER
+============================================================ */
+.main-menu li a i {
+    margin-right: 8px; /* Adds breathing room between icon and text */
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--abc-navy);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+    height: var(--header-h);
+}
+
+.header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* ── Logo / Branding ── */
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin-right: auto; /* 💥 This forcefully pushes the nav menu over to the right side */
+    padding-left: 0;    /* Removes any space trapping it from the left edge */
+}
+
+.site-branding > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    padding-left: 0;
+}
+
+.site-branding > a img {
+    height: 44px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    object-position: left center; /* Anchors the actual image content tightly to the left side */
+}
+/* ============================================================
+   HAMBURGER BUTTON  (JS-driven, replaces checkbox)
+============================================================ */
+.hamburger-btn {
+    display: none;                  /* hidden on desktop */
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s var(--ease-smooth),
+                border-color 0.2s var(--ease-smooth);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    padding: 0;
+    margin-left: auto;             /* push to right on mobile */
+    position: relative;
+    z-index: 1101;                 /* above overlay */
+}
+
+.hamburger-btn:hover,
+.hamburger-btn:focus-visible {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.4);
+}
+
+.hamburger-btn[aria-expanded="true"] {
+    background: var(--abc-red);
+    border-color: var(--abc-red);
+}
+
+/* Three-bar icon built from spans */
+.hamburger-btn .hb-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    gap: 0;
+    position: relative;
+}
+
+.hamburger-btn .hb-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--abc-white);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition:
+        transform 0.35s var(--ease-bounce),
+        opacity   0.2s var(--ease-smooth),
+        top       0.35s var(--ease-smooth),
+        width     0.25s var(--ease-smooth);
+}
+
+/* Default positions */
+.hamburger-btn .hb-line:nth-child(1) { top: 4px; }
+.hamburger-btn .hb-line:nth-child(2) { top: 10px; }
+.hamburger-btn .hb-line:nth-child(3) { top: 16px; width: 16px; }  /* shorter bottom */
+
+/* ── Open (×) state ── */
+.hamburger-btn[aria-expanded="true"] .hb-line:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+    width: 22px;
+}
+.hamburger-btn[aria-expanded="true"] .hb-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.hamburger-btn[aria-expanded="true"] .hb-line:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+    width: 22px;
+}
+
+/* Hide the old checkbox-based toggle entirely */
+.nav-toggle,
+.hamburger { display: none !important; }
+
+/* ============================================================
+   DESKTOP NAVIGATION
+============================================================ */
+.main-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: nowrap;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu li a {
+    display: block;
+    padding: 8px 13px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.88);
+    text-decoration: none;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition:
+        color      0.18s var(--ease-smooth),
+        background 0.18s var(--ease-smooth);
+    letter-spacing: 0.1px;
+}
+
+.main-menu li a:hover,
+.main-menu li a:focus-visible {
+    color: var(--abc-white);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Active / current page */
+.main-menu li.current-menu-item > a,
+.main-menu li.current_page_item > a {
+    color: var(--abc-white);
+    background: rgba(255,255,255,0.12);
+}
+
+/* Highlighted items (ENGLISH, भिडियो) */
+.main-menu li a.menu-highlight {
+    background: var(--abc-red);
+    color: var(--abc-white);
+    font-weight: 700;
+    padding: 7px 14px;
+}
+
+.main-menu li a.menu-highlight:hover,
+.main-menu li a.menu-highlight:focus-visible {
+    background: var(--abc-red-dark);
+    color: var(--abc-white);
+}
+
+/* ── Active underline indicator ── */
+.main-menu li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: var(--abc-red);
+    border-radius: 2px;
+    width: 0;
+    margin-top: 2px;
+    transition: width 0.2s var(--ease-smooth);
+}
+.main-menu li a.menu-highlight::after { display: none; }
+.main-menu li a:hover::after,
+.main-menu li.current-menu-item > a::after { width: 100%; }
+
+/* ============================================================
+   FULLSCREEN OVERLAY (mobile backdrop)
+============================================================ */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    z-index: 1099;
+    transition: background 0.35s var(--ease-smooth);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-overlay.is-open {
+    display: block;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/* ============================================================
+   MOBILE DRAWER
+============================================================ */
+
+/* ── Nepali date bar ── */
+.nepali-date-box {
+    background: var(--abc-navy-light);
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    font-family: 'Hind Siliguri', sans-serif;
+    padding: 5px 20px;
+    text-align: right;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ============================================================
+   RESPONSIVE  — ≤ 900px: activate mobile menu
+============================================================ */
+@media (max-width: 900px) {
+
+    /* Show hamburger */
+    .hamburger-btn { display: flex; }
+
+    /* Logo takes its space, push hamburger to far right */
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    /* ── Slide-in drawer ── */
+    .main-navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: var(--mobile-menu-w);
+        max-width: 85vw;
+        background: var(--abc-navy);
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 1100;
+        transform: translateX(110%);
+        transition: transform 0.38s var(--ease-smooth);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: calc(var(--header-h) + 12px) 0 32px;
+        box-shadow: -6px 0 32px rgba(0,0,0,0.4);
+        will-change: transform;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Open state — JS adds .is-open */
+    .main-navigation.is-open {
+        transform: translateX(0);
+    }
+
+    /* ── Mobile menu list ── */
+    .main-menu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    /* Divider between items */
+    .main-menu li {
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        opacity: 0;
+        transform: translateX(24px);
+        transition:
+            opacity   0.28s var(--ease-smooth),
+            transform 0.28s var(--ease-smooth);
+    }
+
+    /* Stagger items in when open */
+    .main-navigation.is-open .main-menu li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .main-navigation.is-open .main-menu li:nth-child(1)  { transition-delay: 0.04s; }
+    .main-navigation.is-open .main-menu li:nth-child(2)  { transition-delay: 0.07s; }
+    .main-navigation.is-open .main-menu li:nth-child(3)  { transition-delay: 0.10s; }
+    .main-navigation.is-open .main-menu li:nth-child(4)  { transition-delay: 0.13s; }
+    .main-navigation.is-open .main-menu li:nth-child(5)  { transition-delay: 0.16s; }
+    .main-navigation.is-open .main-menu li:nth-child(6)  { transition-delay: 0.19s; }
+    .main-navigation.is-open .main-menu li:nth-child(7)  { transition-delay: 0.22s; }
+    .main-navigation.is-open .main-menu li:nth-child(8)  { transition-delay: 0.25s; }
+    .main-navigation.is-open .main-menu li:nth-child(9)  { transition-delay: 0.28s; }
+    .main-navigation.is-open .main-menu li:nth-child(10) { transition-delay: 0.31s; }
+    .main-navigation.is-open .main-menu li:nth-child(11) { transition-delay: 0.34s; }
+    .main-navigation.is-open .main-menu li:nth-child(12) { transition-delay: 0.37s; }
+
+    .main-menu li:last-child { border-bottom: none; }
+
+    .main-menu li a {
+        padding: 14px 16px;
+        font-size: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255,255,255,0.9);
+        position: relative;
+    }
+
+    /* Red left accent on hover */
+    .main-menu li a::before {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 0;
+        background: var(--abc-red);
+        border-radius: 2px;
+        position: absolute;
+        left: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: height 0.2s var(--ease-smooth);
+        flex-shrink: 0;
+    }
+    .main-menu li a:hover::before,
+    .main-menu li.current-menu-item > a::before { height: 60%; }
+
+    /* Remove underline pseudo on mobile */
+    .main-menu li a::after { display: none !important; }
+
+    .main-menu li a:hover,
+    .main-menu li a:focus-visible {
+        background: rgba(255,255,255,0.07);
+        color: var(--abc-white);
+        padding-left: 24px;
+    }
+
+    /* Highlighted pills on mobile */
+    .main-menu li a.menu-highlight {
+        background: var(--abc-red);
+        color: var(--abc-white);
+        border-radius: 8px;
+        margin-top: 8px;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .main-menu li a.menu-highlight::before { display: none; }
+    .main-menu li a.menu-highlight:hover { background: var(--abc-red-dark); padding-left: 16px; }
+
+    /* Drawer header strip (logo repeat + close hint) */
+    .main-navigation::before {
+        content: 'मेनु';
+        display: block;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--abc-red);
+        color: var(--abc-white);
+        font-family: 'Hind Siliguri', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        margin: 0 0 8px;
+        z-index: 1;
+    }
+}
+
+/* ── Very small screens ── */
+@media (max-width: 380px) {
+    :root { --mobile-menu-w: 100vw; }
+    .main-navigation { box-shadow: none; }
+    .site-branding > a img { height: 36px; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    .main-navigation,
+    .hamburger-btn .hb-line,
+    .main-menu li,
+    .nav-overlay { transition: none !important; }
+}
+
+/* ============================================================
+   LOGO POSITIONING & LAYOUT OVERRIDES
+============================================================ */
+
+/* 1. Force the parent wrapper to stay out of grid mode on desktop */
+.site-header .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+    max-width: 1240px !important;
+}
+
+/* 2. Strip old margins and slam logo wrapper to the absolute left */
+.site-header .site-branding {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-right: auto !important; /* Forces nav components to the right */
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+    flex-shrink: 0 !important;
+    width: auto !important; /* Overrides style.css width restrictions */
+}
+
+/* 3. Handle the anchor link block directly */
+.site-header .site-branding > a {
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* 4. Fix image metrics to prevent clipping into the home link button */
+.site-header .site-branding img, 
+.site-header .site-branding > a img {
+    height: 44px !important; /* Unified branding size metric */
+    width: auto !important;  /* Stops style.css wide stretching */
+    max-width: 100% !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+}
+
+/* 5. Clean layout flow on the right navigation side */
+.site-header .main-navigation {
+    margin-top: 0 !important; /* Removes legacy top pushing margins from style.css */
+    display: flex !important;
+    justify-content: flex-end !important;
+    flex: 1 !important;
+}
+
+
+/* merquee tiker css */
+/* ============================================================
+   ABC Nepal TV — Date Bar / Marquee / Social Icons
+   File: date-bar.css
+   Enqueue alongside header-nav.css, OR append to header-nav.css.
+
+   NOTE: This replaces the old plain `.nepali-date-box` bar.
+   The old .nepali-date-box rule in header-nav.css still applies
+   to the date text itself — these rules wrap it in a flex row.
+============================================================ */
+
+:root {
+    --abc-gold:       #c9a227;
+    --abc-gold-dark:  #9c7d1e;
+    --abc-marquee-bg-1: #14142b;
+    --abc-marquee-bg-2: #21213f;
+}
+
+/* ── Outer bar: date | marquee | social ── */
+.abc-date-bar {
+    display: flex;
+    align-items: center;
+    background: var(--abc-navy-light);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    height: 38px;
+    overflow: hidden;
+}
+
+/* Date block — fixed width, no shrink */
+.abc-date-bar .nepali-date-box {
+    flex-shrink: 0;
+    border-top: none; /* was border-top in old standalone version */
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── Marquee wrap — fills remaining space ── */
+.abc-ticker-wrap {
+    flex: 1;
+    min-width: 0; /* critical for flex truncation/overflow to work */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(90deg, var(--abc-marquee-bg-1), var(--abc-marquee-bg-2));
+    position: relative;
+}
+
+.abc-ticker-label {
+    flex-shrink: 0;
+    background: var(--abc-gold);
+    color: var(--abc-navy);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+    padding-right: 22px;
+}
+
+.abc-ticker-track {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Fade edges so text doesn't hard-cut */
+.abc-ticker-track::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 24px;
+    background: linear-gradient(90deg, transparent, var(--abc-marquee-bg-2));
+    z-index: 2;
+    pointer-events: none;
+}
+
+.abc-ticker-content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: abc-marquee-scroll linear infinite;
+    /* duration is set inline via JS based on content width */
+    animation-duration: 30s;
+}
+
+.abc-ticker-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes abc-marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); } /* content is duplicated 2x, so -50% = one full loop */
+}
+
+.abc-ticker-item {
+    color: rgba(255,255,255,0.92);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 4px;
+    transition: color 0.15s ease;
+}
+
+a.abc-ticker-item:hover,
+a.abc-ticker-item:focus-visible {
+    color: var(--abc-gold);
+    text-decoration: underline;
+}
+
+.abc-ticker-sep {
+    color: var(--abc-gold);
+    font-size: 6px;
+    margin: 0 14px;
+    flex-shrink: 0;
+}
+
+/* ── Social icons ── */
+.abc-social-icons {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.abc-social {
+    width: 38px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease;
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.abc-social:last-child { border-right: none; }
+
+.abc-social:hover,
+.abc-social:focus-visible {
+    color: var(--abc-white);
+}
+
+.abc-social.yt:hover   { background: #ff0000; }
+.abc-social.fb:hover   { background: #1877f2; }
+.abc-social.x:hover    { background: #000000; }
+.abc-social.mail:hover { background: var(--abc-red); }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 900px) {
+    .abc-date-bar { height: 34px; }
+
+    .abc-date-bar .nepali-date-box {
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .abc-ticker-label {
+        font-size: 10px;
+        padding: 4px 10px;
+        padding-right: 18px;
+    }
+
+    .abc-ticker-item { font-size: 12px; }
+
+    /* Hide a couple of social icons on very small screens to save space */
+    .abc-social { width: 32px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+    /* Keep only YT + FB + mail visible; X hidden to save space */
+    .abc-social.x { display: none; }
+}

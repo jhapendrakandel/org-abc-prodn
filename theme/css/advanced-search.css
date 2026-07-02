@@ -1,0 +1,452 @@
+/* ================================================
+   ABC Nepal TV — Advanced Search Bar v2
+   File: css/advanced-search.css
+   - Fixed height bar (does not grow with results)
+   - Results float in an overlay panel
+   - SVG icons (no external Font Awesome dependency)
+================================================ */
+
+.abcs-wrap {
+    background: #1a1a2e;
+    border-bottom: 3px solid #c0392b;
+    padding: 14px 0;
+    position: relative;
+    z-index: 200;
+}
+
+.abcs-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.abcs-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ── Icons ── */
+.abcs-icon {
+    width: 17px;
+    height: 17px;
+    color: rgba(255, 255, 255, 0.45);
+    flex-shrink: 0;
+}
+
+/* ── Keyword row ── */
+.abcs-keyword-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.abcs-field--keyword {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+    padding: 0 14px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.abcs-field--keyword:focus-within {
+    border-color: #c0392b;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.abcs-input--keyword {
+    background: transparent;
+    border: none;
+    flex: 1;
+    padding: 11px 0;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Hind Siliguri', sans-serif;
+    outline: none;
+}
+
+.abcs-input--keyword::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Remove native search input X button conflicts */
+.abcs-input--keyword::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* ── Generic inputs / selects (used inside filter panel) ── */
+.abcs-input,
+.abcs-select {
+    width: 100%;
+    padding: 10px 13px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: border-color 0.2s, background 0.2s;
+    box-sizing: border-box;
+}
+
+.abcs-input:focus,
+.abcs-select:focus {
+    outline: none;
+    border-color: #c0392b;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.abcs-input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(0.6);
+    cursor: pointer;
+}
+
+.abcs-select option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* ── Buttons ── */
+.abcs-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.abcs-btn:active { transform: scale(0.97); }
+
+.abcs-btn--search {
+    background: #c0392b;
+    color: #fff;
+    flex-shrink: 0;
+}
+.abcs-btn--search:hover { background: #a93226; }
+
+.abcs-btn--clear {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    padding: 9px 16px;
+}
+.abcs-btn--clear:hover { background: rgba(255, 255, 255, 0.18); color: #fff; }
+
+/* ── Toggle filters button (always visible — NOT hidden) ── */
+.abcs-toggle-filters {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Hind Siliguri', sans-serif;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.abcs-toggle-filters:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.abcs-toggle-filters[aria-expanded="true"] {
+    background: #c0392b;
+    border-color: #c0392b;
+    color: #fff;
+}
+
+.abcs-toggle-filters .abcs-chevron {
+    transition: transform 0.25s;
+    color: currentColor;
+}
+
+.abcs-toggle-filters[aria-expanded="true"] .abcs-chevron {
+    transform: rotate(180deg);
+}
+
+/* ── Filters panel ── */
+.abcs-filters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+    padding-top: 4px;
+    animation: abcs-slide-down 0.2s ease;
+}
+
+.abcs-filters[hidden] { display: none !important; }
+
+@keyframes abcs-slide-down {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.abcs-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+    letter-spacing: 0.4px;
+    font-family: sans-serif;
+}
+
+.abcs-field--range { grid-column: span 2; }
+
+.abcs-range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.abcs-range-inputs .abcs-input { flex: 1; }
+.abcs-range-sep { color: rgba(255, 255, 255, 0.5); flex-shrink: 0; }
+
+.abcs-range-error {
+    color: #f87171;
+    font-size: 12px;
+    margin: 6px 0 0;
+    font-family: sans-serif;
+}
+.abcs-range-error[hidden] { display: none !important; }
+
+.abcs-field--clear {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* ════════════════════════════════════════════════
+   RESULTS — FLOATING OVERLAY (does NOT push page down)
+════════════════════════════════════════════════ */
+
+.abcs-results-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    pointer-events: none; /* only the panel itself is interactive */
+}
+
+.abcs-results-panel {
+    pointer-events: auto;
+    width: 100%;
+    max-width: 1240px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    max-height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    animation: abcs-drop-in 0.18s ease;
+}
+
+@keyframes abcs-drop-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.abcs-results-close {
+    position: sticky;
+    top: 12px;
+    float: right;
+    margin-right: 14px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #555;
+    z-index: 5;
+    transition: background 0.2s;
+}
+.abcs-results-close:hover { background: #e0e0e0; color: #1a1a2e; }
+
+.abcs-results {
+    padding: 50px 24px 24px;
+}
+
+/* ── Summary ── */
+.abcs-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 14px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.abcs-summary__count {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.abcs-summary__count strong { color: #c0392b; font-size: 16px; }
+.abcs-summary__count em { font-style: italic; color: #555; }
+.abcs-summary__count--none { color: #888; }
+.abcs-summary__page { font-size: 12px; color: #999; font-family: sans-serif; }
+
+/* ── Result cards ── */
+.abcs-result-list { display: flex; flex-direction: column; }
+
+.abcs-result-card {
+    display: flex;
+    gap: 16px;
+    border-bottom: 1px solid #efefef;
+    padding: 14px 0;
+    transition: background 0.15s;
+}
+.abcs-result-card:hover { background: #fafafa; }
+
+.abcs-result-card__thumb {
+    flex-shrink: 0;
+    width: 110px;
+    height: 78px;
+    overflow: hidden;
+    border-radius: 4px;
+    display: block;
+}
+.abcs-result-card__thumb img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.abcs-result-card__body { flex: 1; min-width: 0; }
+
+.abcs-badge {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-family: sans-serif;
+}
+.abcs-badge--live { background: #dc2626; }
+
+.abcs-result-card__title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.4;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.abcs-result-card__title a { color: #1a1a2e; text-decoration: none; }
+.abcs-result-card__title a:hover { color: #c0392b; }
+
+.abcs-result-card__excerpt {
+    font-size: 13px;
+    color: #555;
+    margin: 0 0 8px;
+    line-height: 1.55;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.abcs-highlight {
+    background: #fef08a;
+    color: #1a1a2e;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+.abcs-result-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: #999;
+    font-family: sans-serif;
+}
+.abcs-meta-sep { color: #ccc; }
+
+/* ── No results ── */
+.abcs-no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: #aaa;
+}
+.abcs-no-results p {
+    font-size: 16px; color: #666; margin: 0 0 4px;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.abcs-no-results small { font-size: 12px; color: #aaa; font-family: sans-serif; }
+
+/* ── Error ── */
+.abcs-error-msg {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    color: #991b1b;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* ── Pagination ── */
+.abcs-pagination {
+    display: flex; align-items: center; gap: 6px;
+    justify-content: center; margin-top: 20px; flex-wrap: wrap;
+}
+.abcs-page-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 4px;
+    background: #fff; border: 1px solid #ddd; color: #333;
+    font-size: 13px; font-weight: 600; text-decoration: none;
+    transition: background 0.15s; font-family: sans-serif;
+}
+.abcs-page-btn:hover { background: #f0f0f0; }
+.abcs-page-btn--active { background: #c0392b; border-color: #c0392b; color: #fff; pointer-events: none; }
+.abcs-page-ellipsis { color: #aaa; padding: 0 4px; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .abcs-filters { grid-template-columns: repeat(2, 1fr); }
+    .abcs-field--range { grid-column: span 2; }
+    .abcs-field--clear { grid-column: span 2; justify-content: flex-end; }
+    .abcs-results-panel { max-height: 80vh; }
+}
+
+@media (max-width: 640px) {
+    .abcs-keyword-row { flex-wrap: wrap; }
+    .abcs-field--keyword { width: 100%; order: 1; }
+    .abcs-toggle-filters { order: 2; flex: 1; justify-content: center; }
+    .abcs-btn--search { order: 3; flex: 1; justify-content: center; }
+
+    .abcs-filters { grid-template-columns: 1fr; }
+    .abcs-field--range, .abcs-field--clear { grid-column: span 1; }
+    .abcs-field--clear { justify-content: flex-start; }
+
+    .abcs-results-overlay { padding: 0 8px; }
+    .abcs-result-card__thumb { width: 88px; height: 64px; }
+    .abcs-result-card__excerpt { display: none; }
+}

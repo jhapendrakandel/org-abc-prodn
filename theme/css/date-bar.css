@@ -1,0 +1,194 @@
+/* ============================================================
+WORKS FORM HEADEr-nav.css
+ABC Nepal TV — Date Bar / Marquee / Social Icons
+   File: date-bar.css
+   Enqueue alongside header-nav.css, OR append to header-nav.css.
+
+   NOTE: This replaces the old plain `.nepali-date-box` bar.
+   The old .nepali-date-box rule in header-nav.css still applies
+   to the date text itself — these rules wrap it in a flex row.
+============================================================ */
+
+:root {
+    --abc-gold:       #c9a227;
+    --abc-gold-dark:  #9c7d1e;
+    --abc-marquee-bg-1: #14142b;
+    --abc-marquee-bg-2: #21213f;
+}
+
+/* ── Outer bar: date | marquee | social ── */
+.abc-date-bar {
+    display: flex;
+    align-items: center;
+    background: var(--abc-navy-light);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    height: 38px;
+    overflow: hidden;
+}
+
+/* Date block — fixed width, no shrink */
+.abc-date-bar .nepali-date-box {
+    flex-shrink: 0;
+    border-top: none; /* was border-top in old standalone version */
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── Marquee wrap — fills remaining space ── */
+.abc-ticker-wrap {
+    flex: 1;
+    min-width: 0; /* critical for flex truncation/overflow to work */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(90deg, var(--abc-marquee-bg-1), var(--abc-marquee-bg-2));
+    position: relative;
+}
+
+.abc-ticker-label {
+    flex-shrink: 0;
+    background: var(--abc-gold);
+    color: var(--abc-navy);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+    padding-right: 22px;
+}
+
+.abc-ticker-track {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Fade edges so text doesn't hard-cut */
+.abc-ticker-track::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 24px;
+    background: linear-gradient(90deg, transparent, var(--abc-marquee-bg-2));
+    z-index: 2;
+    pointer-events: none;
+}
+
+.abc-ticker-content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: abc-marquee-scroll linear infinite;
+    /* duration is set inline via JS based on content width */
+    animation-duration: 30s;
+}
+
+.abc-ticker-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes abc-marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); } /* content is duplicated 2x, so -50% = one full loop */
+}
+
+.abc-ticker-item {
+    color: rgba(255,255,255,0.92);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 4px;
+    transition: color 0.15s ease;
+}
+
+a.abc-ticker-item:hover,
+a.abc-ticker-item:focus-visible {
+    color: var(--abc-gold);
+    text-decoration: underline;
+}
+
+.abc-ticker-sep {
+    color: var(--abc-gold);
+    font-size: 6px;
+    margin: 0 14px;
+    flex-shrink: 0;
+}
+
+/* ── Social icons ── */
+.abc-social-icons {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.abc-social {
+    width: 38px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease;
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.abc-social:last-child { border-right: none; }
+
+.abc-social:hover,
+.abc-social:focus-visible {
+    color: var(--abc-white);
+}
+
+.abc-social.yt:hover   { background: #ff0000; }
+.abc-social.fb:hover   { background: #1877f2; }
+.abc-social.x:hover    { background: #000000; }
+.abc-social.mail:hover { background: var(--abc-red); }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 900px) {
+    .abc-date-bar { height: 34px; }
+
+    .abc-date-bar .nepali-date-box {
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .abc-ticker-label {
+        font-size: 10px;
+        padding: 4px 10px;
+        padding-right: 18px;
+    }
+
+    .abc-ticker-item { font-size: 12px; }
+
+    /* Hide a couple of social icons on very small screens to save space */
+    .abc-social { width: 32px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+    /* Keep only YT + FB + mail visible; X hidden to save space */
+    .abc-social.x { display: none; }
+}
