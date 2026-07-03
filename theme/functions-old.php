@@ -10,7 +10,6 @@ require_once get_template_directory() . '/inc/advanced-search.php';
 
 require_once get_template_directory() . '/inc/ticker-cpt.php';
 
-// ── Load the Video Player + Thumbnail Strip (replaces old broken carousel) ──
 require_once get_template_directory() . '/inc/video-carousel.php';
 
 
@@ -1062,11 +1061,498 @@ function abcnt_handle_clear_breaking() {
 add_action( 'admin_init', 'abcnt_handle_clear_breaking' );
 
 /* ══════════════════════════════════════════════════════
-   NOTE: The old "VIDEO CAROUSEL" block (abc_video_add_meta_box,
-   abc_video_meta_box_html, abc_video_save, abc_get_youtube_id,
-   abc_get_youtube_thumbnail, abc_video_carousel_shortcode,
-   abc_video_enqueue_styles, abc_video_load_more_handler) has been
-   MOVED to /inc/video-carousel.php and is loaded via the
-   require_once at the top of this file. Do not redeclare those
-   functions here — it will cause a fatal "Cannot redeclare" error.
+   VIDEO CAROUSEL — YouTube embed meta + shortcode + carousel
 ══════════════════════════════════════════════════════ */
+
+/**
+ * Add YouTube URL meta box for video posts (abc-video category / post type)
+ */
+function abc_video_add_meta_box() {
+    add_meta_box(
+        'abc_video_youtube_url',
+        '🎬 YouTube Video URL',
+        'abc_video_meta_box_html',
+        'post',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'abc_video_add_meta_box' );
+
+function abc_video_meta_box_html( $post ) {
+    wp_nonce_field( 'abc_video_save', 'abc_video_nonce' );
+    $yt_url = get_post_meta( $post->ID, '_abc_youtube_url', true );
+    ?>
+    <p>
+        <label for="abc_youtube_url"><strong>YouTube Video URL</strong></label><br>
+        <input type="url" id="abc_youtube_url" name="abc_youtube_url"
+               value="<?php echo esc_attr( $yt_url ); ?>"
+               style="width:100%;" placeholder="https://www.youtube.com/watch?v=VIDEO_ID" />
+        <span class="description">Enter full YouTube URL. Video will be embedded in the video carousel.</span>
+    </p>
+    <?php
+}
+
+function abc_video_save( $post_id ) {
+    if ( ! isset( $_POST['abc_video_nonce'] ) || ! wp_verify_nonce( $_POST['abc_video_nonce'], 'abc_video_save' ) ) return;
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+    
+    if ( isset( $_POST['abc_youtube_url'] ) ) {
+        $url = sanitize_url( $_POST['abc_youtube_url'] );
+        update_post_meta( $post_id, '_abc_youtube_url', $url );
+    }
+}
+add_action( 'save_post_post', 'abc_video_save' );
+
+/**
+ * Extract YouTube video ID from URL
+ */
+function abc_get_youtube_id( $url ) {
+    if ( empty( $url ) ) return '';
+    $patterns = array(
+        '/youtu\.be\/([a-zA-Z0-9_-]+)/',
+        '/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/',
+        '/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/',
+        '/youtube\.com\/v\/([a-zA-Z0-9_-]+)/',
+    );
+    foreach ( $patterns as $pattern ) {
+        if ( preg_match( $pattern, $url, $matches ) ) {
+            return $matches[1];
+        }
+    }
+    return '';
+}
+
+/**
+ * Get YouTube thumbnail URL
+ */
+function abc_get_youtube_thumbnail( $video_id, $quality = 'hqdefault' ) {
+    if ( empty( $video_id ) ) return '';
+    return "https://img.youtube.com/vi/{$video_id}/{$quality}.jpg";
+}
+
+/**
+ * Shortcode: [abc_video_carousel] - renders video carousel with prev/next
+ * Features: 1 box per slide, 3D animation, infinite scroll load more
+ */
+function abc_video_carousel_shortcode( $atts ) {
+    $atts = shortcode_atts( array(
+        'count'   => 20,
+        'cat'     => 'abc-video',
+        'show_desc' => 'true',
+    ), $atts );
+   
+    $initial_count = 8; // Show 8 initially
+    $query = new WP_Query( array(
+        'post_type'      => 'post',
+        'posts_per_page' => $initial_count,
+        'category_name'  => $atts['cat'],
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    ) );
+   
+    if ( ! $query->have_posts() ) {
+        return '<p class="abc-video-empty">कोई भिडियो उपलब्ध छैन।</p>';
+    }
+   
+    ob_start();
+    ?>
+    <div class="abc-video-carousel" data-current="0" data-cat="<?php echo esc_attr( $atts['cat'] ); ?>" data-total="<?php echo (int) $atts['count']; ?>" data-loaded="<?php echo $initial_count; ?>">
+        <div class="abc-video-carousel-header">
+            <h2 class="abc-video-carousel-title">एबीसी भिडियो</h2>
+        </div>
+       
+        <div class="abc-video-carousel-viewport">
+            <div class="abc-video-carousel-track" id="abc-video-track">
+                <?php
+                $index = 0;
+                while ( $query->have_posts() ) : $query->the_post();
+                    $post_id = get_the_ID();
+                    $yt_url  = get_post_meta( $post_id, '_abc_youtube_url', true );
+                    $video_id = abc_get_youtube_id( $yt_url );
+                    $thumb_url = $video_id ? abc_get_youtube_thumbnail( $video_id, 'maxresdefault' ) : get_the_post_thumbnail_url( $post_id, 'large' );
+                    if ( empty( $thumb_url ) ) {
+                        $thumb_url = 'https://placehold.co/560x315/eeeeee/999999?text=Video';
+                    }
+                ?>
+                <div class="abc-video-slide" data-index="<?php echo $index; ?>">
+                    <article class="abc-video-card">
+                        <?php if ( $video_id ) : ?>
+                            <div class="abc-video-embed-wrapper" data-video-id="<?php echo esc_attr( $video_id ); ?>">
+                                <img class="abc-video-thumb" src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
+                                <button class="abc-video-play-btn" aria-label="Play video">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        <?php else : ?>
+                            <img class="abc-video-thumb" src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
+                        <?php endif; ?>
+                       
+                        <div class="abc-video-content">
+                            <h3 class="abc-video-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <?php if ( $atts['show_desc'] === 'true' ) : ?>
+                                <p class="abc-video-desc"><?php echo wp_trim_words( get_the_excerpt() ?: get_the_content(), 30 ); ?></p>
+                            <?php endif; ?>
+                            <div class="abc-video-meta">
+                                <time><?php echo get_the_date( 'M j, Y' ); ?></time>
+                                <?php if ( $video_id ) : ?>
+                                    <span class="abc-video-duration" data-duration><?php echo $video_id; ?></span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <?php
+                $index++;
+                endwhile;
+                wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+       
+        <div class="abc-video-carousel-nav">
+            <button class="abc-video-nav-btn abc-video-prev" aria-label="Previous video">‹</button>
+            <div class="abc-video-dots" id="abc-video-dots"></div>
+            <button class="abc-video-nav-btn abc-video-next" aria-label="Next video">›</button>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="abc-video-load-more-wrap">
+            <button class="abc-video-load-more" data-action="load_more" data-nonce="<?php echo wp_create_nonce( 'abc_video_load_more' ); ?>">
+                <span class="abc-load-more-text">थप भिडियो हाल्नुहोस्</span>
+                <span class="abc-load-more-spinner" style="display:none;">⟳</span>
+            </button>
+        </div>
+    </div>
+   
+    <script>
+    (function() {
+        const carousel = document.querySelector('.abc-video-carousel');
+        if (!carousel) return;
+        
+        const track = document.getElementById('abc-video-track');
+        const slides = track ? track.querySelectorAll('.abc-video-slide') : [];
+        const dotsContainer = document.getElementById('abc-video-dots');
+        const prevBtn = document.querySelector('.abc-video-prev');
+        const nextBtn = document.querySelector('.abc-video-next');
+        const loadMoreBtn = document.querySelector('.abc-video-load-more');
+        const viewport = document.querySelector('.abc-video-carousel-viewport');
+       
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let slidesPerView = 1;
+        let isAnimating = false;
+        let loadedCount = parseInt(carousel.dataset.loaded) || 8;
+        const totalAvailable = parseInt(carousel.dataset.total) || 20;
+        const category = carousel.dataset.cat || 'abc-video';
+       
+        function getSlidesPerView() {
+            if (window.innerWidth < 768) return 1;
+            return 1; // Always 1 box per slide
+        }
+       
+        function updateDots() {
+            if (!dotsContainer) return;
+            const totalPages = totalSlides;
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'abc-video-dot' + (i === currentIndex ? ' active' : '');
+                dot.setAttribute('aria-label', 'Go to video ' + (i + 1));
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+       
+        function updateCarousel() {
+            if (!track) return;
+            const slideWidth = slides[0] ? slides[0].offsetWidth + 24 : 0; // 24px gap
+            const offset = -currentIndex * slideWidth;
+           
+            // 3D Transform Animation
+            track.style.transition = isAnimating ? 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none';
+            track.style.transform = `translateX(${offset}px) perspective(1000px)`;
+           
+            // 3D effect on adjacent slides
+            slides.forEach((slide, idx) => {
+                const diff = idx - currentIndex;
+                const absDiff = Math.abs(diff);
+                if (absDiff <= 2) {
+                    const rotateY = diff * 15;
+                    const scale = 1 - absDiff * 0.08;
+                    const zIndex = 10 - absDiff;
+                    slide.style.transition = isAnimating ? 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s' : 'none';
+                    slide.style.transform = `translateZ(${diff * -50}px) rotateY(${rotateY}deg) scale(${scale})`;
+                    slide.style.opacity = absDiff <= 1 ? 1 : 0.6;
+                    slide.style.zIndex = zIndex;
+                } else {
+                    slide.style.opacity = '0.3';
+                    slide.style.zIndex = 0;
+                }
+            });
+           
+            updateNavButtons();
+        }
+       
+        function updateNavButtons() {
+            if (prevBtn) prevBtn.disabled = currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = currentIndex >= totalSlides - 1;
+        }
+       
+        function goToSlide(index, animate = true) {
+            if (index < 0 || index >= totalSlides) return;
+            isAnimating = animate;
+            currentIndex = index;
+            updateCarousel();
+            updateDots();
+           
+            if (animate) {
+                setTimeout(() => { isAnimating = false; }, 700);
+            }
+        }
+       
+        function nextSlide() {
+            if (currentIndex < totalSlides - 1) {
+                goToSlide(currentIndex + 1);
+            } else if (loadedCount < totalAvailable) {
+                // At end and more to load - trigger load more
+                loadMore();
+            }
+        }
+       
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            }
+        }
+       
+        // Load more videos via AJAX
+        function loadMore() {
+            if (loadMoreBtn && !loadMoreBtn.classList.contains('loading')) {
+                loadMoreBtn.classList.add('loading');
+                loadMoreBtn.querySelector('.abc-load-more-text').textContent = 'हाल्नुहुन्छ...';
+                loadMoreBtn.querySelector('.abc-load-more-spinner').style.display = 'inline-block';
+               
+                const formData = new FormData();
+                formData.append('action', 'abc_video_load_more');
+                formData.append('nonce', loadMoreBtn.dataset.nonce);
+                formData.append('cat', category);
+                formData.append('offset', loadedCount);
+                formData.append('count', 4); // Load 4 more at a time
+               
+                fetch(ajaxurl, {
+                    method: 'POST',
+                    body: formData,
+                    credentials: 'same-origin'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    loadMoreBtn.classList.remove('loading');
+                    loadMoreBtn.querySelector('.abc-load-more-text').textContent = 'थप भिडियो हाल्नुहोस्';
+                    loadMoreBtn.querySelector('.abc-load-more-spinner').style.display = 'none';
+                   
+                    if (data.success && data.html) {
+                        // Append new slides
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = data.html;
+                        const newSlides = tempDiv.querySelectorAll('.abc-video-slide');
+                       
+                        newSlides.forEach((slide, idx) => {
+                            slide.dataset.index = totalSlides + idx;
+                            track.appendChild(slide);
+                        });
+                       
+                        // Re-get slides array
+                        const newTotalSlides = track.querySelectorAll('.abc-video-slide').length;
+                        // Update totalSlides reference
+                        Object.defineProperty(window, 'abcTotalSlides', { value: newTotalSlides, writable: true });
+                        window.abcTotalSlides = newTotalSlides;
+                       
+                        loadedCount += newSlides.length;
+                       
+                        // Hide load more if all loaded
+                        if (loadedCount >= totalAvailable) {
+                            loadMoreBtn.style.display = 'none';
+                        }
+                       
+                        // Update dots
+                        updateDots();
+                       
+                        // Re-attach play button handlers for new slides
+                        attachPlayHandlers();
+                    } else {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                })
+                .catch(err => {
+                    loadMoreBtn.classList.remove('loading');
+                    loadMoreBtn.querySelector('.abc-load-more-text').textContent = 'थप भिडियो हाल्नुहोस्';
+                    loadMoreBtn.querySelector('.abc-load-more-spinner').style.display = 'none';
+                });
+            }
+        }
+       
+        function goToSlide(index, animate = true) {
+            if (index < 0 || index >= track.querySelectorAll('.abc-video-slide').length) return;
+            isAnimating = animate;
+            currentIndex = index;
+            updateCarousel();
+            updateDots();
+           
+            if (animate) {
+                setTimeout(() => { isAnimating = false; }, 700);
+            }
+        }
+       
+        function attachPlayHandlers() {
+            document.querySelectorAll('.abc-video-play-btn').forEach(btn => {
+                if (btn.dataset.attached) return;
+                btn.dataset.attached = 'true';
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const wrapper = this.closest('.abc-video-embed-wrapper');
+                    const videoId = wrapper.dataset.videoId;
+                    if (videoId) {
+                        wrapper.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    }
+                });
+            });
+        }
+       
+        // Event listeners
+        if (prevBtn) {
+            prevBtn.addEventListener('click', prevSlide);
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+        }
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', loadMore);
+        }
+       
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+       
+        // Touch/swipe support
+        let touchStartX = 0;
+        viewport.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        viewport.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide(); else prevSlide();
+            }
+        }, { passive: true });
+       
+        // Responsive
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                updateCarousel();
+                updateDots();
+            }, 250);
+        });
+       
+        // Initialize
+        slides.forEach(attachPlayHandlers);
+        updateDots();
+        updateCarousel();
+    })();
+    </script>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode( 'abc_video_carousel', 'abc_video_carousel_shortcode' );
+
+/**
+ * Enqueue video carousel styles
+ */
+function abc_video_enqueue_styles() {
+    // Load on homepage, abc-videos page, or any page using the shortcode
+    if ( is_page_template( 'page-abc-videos.php' ) || is_page( 'abc-videos' ) || is_front_page() || is_home() ) {
+        wp_enqueue_style( 'abc-video-carousel', get_template_directory_uri() . '/css/video-carousel.css', array(), '1.0.0' );
+        
+        // Localize ajaxurl for the carousel JS
+        wp_enqueue_script( 'abc-video-carousel-js', get_template_directory_uri() . '/js/video-carousel.js', array('jquery'), '1.0.0', true );
+        wp_localize_script( 'abc-video-carousel-js', 'abcVideoCarousel', array(
+            'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        ) );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'abc_video_enqueue_styles' );
+
+/**
+ * AJAX: Load more videos for carousel
+ */
+function abc_video_load_more_handler() {
+    check_ajax_referer( 'abc_video_load_more', 'nonce' );
+   
+    $cat   = isset( $_POST['cat'] ) ? sanitize_text_field( $_POST['cat'] ) : 'abc-video';
+    $offset = isset( $_POST['offset'] ) ? absint( $_POST['offset'] ) : 0;
+    $count  = isset( $_POST['count'] ) ? absint( $_POST['count'] ) : 4;
+   
+    $query = new WP_Query( array(
+        'post_type'      => 'post',
+        'posts_per_page' => $count,
+        'offset'         => $offset,
+        'category_name'  => $cat,
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    ) );
+   
+    if ( ! $query->have_posts() ) {
+        wp_send_json_error( 'No more videos' );
+    }
+   
+    ob_start();
+    $index = 0;
+    while ( $query->have_posts() ) : $query->the_post();
+        $post_id = get_the_ID();
+        $yt_url  = get_post_meta( $post_id, '_abc_youtube_url', true );
+        $video_id = abc_get_youtube_id( $yt_url );
+        $thumb_url = $video_id ? abc_get_youtube_thumbnail( $video_id, 'maxresdefault' ) : get_the_post_thumbnail_url( $post_id, 'large' );
+        if ( empty( $thumb_url ) ) {
+            $thumb_url = 'https://placehold.co/560x315/eeeeee/999999?text=Video';
+        }
+    ?>
+    <div class="abc-video-slide" data-index="<?php echo $index; ?>">
+        <article class="abc-video-card">
+            <?php if ( $video_id ) : ?>
+                <div class="abc-video-embed-wrapper" data-video-id="<?php echo esc_attr( $video_id ); ?>">
+                    <img class="abc-video-thumb" src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
+                    <button class="abc-video-play-btn" aria-label="Play video">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
+                </div>
+            <?php else : ?>
+                <img class="abc-video-thumb" src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy">
+            <?php endif; ?>
+           
+            <div class="abc-video-content">
+                <h3 class="abc-video-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <p class="abc-video-desc"><?php echo wp_trim_words( get_the_excerpt() ?: get_the_content(), 30 ); ?></p>
+                <div class="abc-video-meta">
+                    <time><?php echo get_the_date( 'M j, Y' ); ?></time>
+                    <?php if ( $video_id ) : ?>
+                        <span class="abc-video-duration" data-duration><?php echo $video_id; ?></span>
+                    <?php endif; ?>
+                </div>
+            </article>
+        </div>
+        <?php
+        $index++;
+    endwhile;
+    wp_reset_postdata();
+   
+    $html = ob_get_clean();
+    wp_send_json_success( array( 'html' => $html ) );
+}
+add_action( 'wp_ajax_abc_video_load_more', 'abc_video_load_more_handler' );
+add_action( 'wp_ajax_nopriv_abc_video_load_more', 'abc_video_load_more_handler' );
