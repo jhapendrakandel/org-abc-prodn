@@ -281,9 +281,84 @@
     transform: scale(1.2);
 }
 
+}
+
 .abc-video-dot.active {
     background: var(--color-secondary, #b80000);
     transform: scale(1.3);
+}
+
+/* ── Viewport & 3D Perspective ── */
+.abc-video-carousel-viewport {
+    perspective: 1000px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* ── Load More Button ── */
+.abc-video-load-more-wrap {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.abc-video-load-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--color-secondary, #b80000), var(--color-secondary-dark, #8b0000));
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(184, 0, 0, 0.3);
+    min-width: 220px;
+}
+
+.abc-video-load-more:hover:not(.loading):not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(184, 0, 0, 0.4);
+}
+
+.abc-video-load-more:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.abc-video-load-more.loading {
+    background: linear-gradient(135deg, #8b0000, #660000);
+}
+
+.abc-load-more-spinner {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ── 3D Animation Keyframes ── */
+@keyframes slideIn3D {
+    from {
+        transform: translateX(100px) rotateY(-30deg) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* ── 3D Animation on new slides ── */
+.abc-video-slide.abc-new-slide {
+    animation: slideIn3D 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 /* ── Empty State ── */
@@ -299,19 +374,25 @@
     .abc-video-carousel {
         padding: 16px 12px;
     }
-    
+   
     .abc-video-nav-btn {
         width: 40px;
         height: 40px;
         font-size: 18px;
     }
-    
+   
     .abc-video-dots {
         gap: 6px;
     }
-    
+   
     .abc-video-dot {
         width: 8px;
         height: 8px;
+    }
+    
+    .abc-video-load-more {
+        padding: 12px 24px;
+        font-size: 14px;
+        min-width: 200px;
     }
 }

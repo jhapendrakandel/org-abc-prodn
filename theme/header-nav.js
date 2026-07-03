@@ -7,8 +7,16 @@
 (function () {
     'use strict';
 
-    /* ── Wait for DOM ── */
-    document.addEventListener('DOMContentLoaded', function () {
+    /* ── Helper: run when DOM is ready ── */
+    function onDOMLoaded(fn) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fn);
+        } else {
+            fn();
+        }
+    }
+
+    onDOMLoaded(function () {
 
         /* ── Elements ── */
         var btn  = document.getElementById('abc-hamburger');

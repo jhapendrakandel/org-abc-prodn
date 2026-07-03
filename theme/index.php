@@ -952,6 +952,83 @@ endwhile; ?>
 wp_reset_postdata();
 }
 
+// ── Video Band: 4-up grid with video-specific styling ──
+function nyt_render_video_band( $cfg ) {
+$label = $cfg['label'];
+$cat   = $cfg['cat'];
+$link  = $cfg['link'];
+$cols  = isset( $cfg['cols'] ) ? (int) $cfg['cols'] : 4;
+$q = new WP_Query( array(
+'posts_per_page' => $cols,
+'category_name'  => $cat,
+    ) );
+if ( ! $q->have_posts() ) {
+wp_reset_postdata();
+return;
+    }
+?>
+<div class="nyt-band nyt-video-band">
+<div class="nyt-band-head">
+<h2><?php echo esc_html( $label ); ?></h2>
+<a class="nyt-view-all" href="<?php echo esc_url( $link ); ?>">See more &rsaquo;</a>
+</div>
+<div class="nyt-band-grid nyt-video-grid">
+<?php while ( $q->have_posts() ) : $q->the_post();
+nyt_render_video_story_card( get_the_ID() );
+endwhile; ?>
+</div>
+</div>
+<?php
+wp_reset_postdata();
+}
+
+// Render a single video story card with play button overlay
+function nyt_render_video_story_card( $post_id ) {
+$yt_url  = get_post_meta( $post_id, '_abc_youtube_url', true );
+$video_id = '';
+if ( $yt_url ) {
+$patterns = array(
+'/youtu\.be\/([a-zA-Z0-9_-]+)/',
+'/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/',
+'/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/',
+'/youtube\.com\/v\/([a-zA-Z0-9_-]+)/',
+);
+foreach ( $patterns as $pattern ) {
+if ( preg_match( $pattern, $yt_url, $matches ) ) {
+$video_id = $matches[1];
+break;
+}
+}
+}
+$thumb_url = $video_id ? 'https://img.youtube.com/vi/' . $video_id . '/maxresdefault.jpg' : get_the_post_thumbnail_url( $post_id, 'large' );
+if ( empty( $thumb_url ) ) {
+$thumb_url = 'https://placehold.co/560x315/eeeeee/999999?text=Video';
+}
+?>
+<article class="nyt-story nyt-video-story">
+<a class="nyt-video-link" href="<?php echo esc_url( get_permalink( $post_id ) ); ?>">
+<div class="nyt-video-thumb-wrap">
+<img src="<?php echo esc_url( $thumb_url ); ?>" alt="" loading="lazy" class="nyt-video-thumb">
+<?php if ( $video_id ) : ?>
+<div class="nyt-video-play-overlay" data-video-id="<?php echo esc_attr( $video_id ); ?>">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+</div>
+<?php endif; ?>
+</div>
+</a>
+<h3><a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>"><?php echo esc_html( get_the_title( $post_id ) ); ?></a></h3>
+<p class="nyt-dek"><?php echo esc_html( wp_trim_words( get_the_excerpt( $post_id ) ?: get_the_content( $post_id ), 18 ) ); ?></p>
+<div class="nyt-byline-row">
+<span class="nyt-byline"><?php echo esc_html( nyt_byline( $post_id ) ); ?></span>
+<span class="nyt-readtime"><?php echo esc_html( nyt_read_time( $post_id ) ); ?></span>
+<?php if ( $video_id ) : ?>
+<span class="nyt-video-badge">▶ Video</span>
+<?php endif; ?>
+</div>
+</article>
+<?php
+}
+
 // Render the विशेष कभरेज (Special Coverage) band — 50/50 split.
 // Left: latest UPDATED post with feature image.
 // Right: rest of updated posts from same category as bulleted headlines (no image).
@@ -1691,16 +1768,12 @@ nyt_render_intl_split( array(
     'featured_count'=> 2,   // 2 featured stories (left 30% + center 30%)
     'bullet_count'  => 5,   // 5 headline bullets (right 40%)
 ) );
-// ── ABC TV PROGRAMS: Video Carousel instead of regular band ──
-if ( function_exists( 'abc_video_carousel_shortcode' ) ) {
-    echo do_shortcode( '[abc_video_carousel count="10" cat="abc-video" show_desc="true"]' );
-} else {
-    nyt_render_band( array(
-        'label' => 'ABC TV PROGRAMS',
-        'cat'   => 'abc-video',
-        'link'  => home_url( '/abc-videos/' ),
-    ) );
-}
+// ── ABC TV PROGRAMS: Video grid (4 boxes) like other categories ──
+nyt_render_video_band( array(
+    'label' => 'एबीसी भिडियो',
+    'cat'   => 'abc-video',
+    'link'  => home_url( '/abc-videos/' ),
+) );
 nyt_render_band( array(
 'label' => 'खेलकुद',
 'cat'   => 'sports',

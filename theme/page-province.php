@@ -91,15 +91,15 @@ if ( ! function_exists( 'abc_render_province_panel' ) ) {
                 $rest     = array_slice( $posts, $featured_count );
                 ?>
                 <div class="nyt-province-grid">
-                    ="nyt-province-featured">
+                    <div class="nyt-province-featured">
                         <?php foreach ( $featured as $fp ) : $fp_id = $fp->ID; ?>
-                            ="nyt-province-feature-card">
-                                ="nyt-province-feature-media">
-                                    ="<?php echo esc_url( get_permalink( $fp_id ) ); ?>">
+                            <article class="nyt-province-feature-card">
+                                <div class="nyt-province-feature-media">
+                                    <a href="<?php echo esc_url( get_permalink( $fp_id ) ); ?>">
                                         <?php if ( has_post_thumbnail( $fp_id ) ) {
                                             echo get_the_post_thumbnail( $fp_id, 'large' );
                                         } else { ?>
-                                            ="https://placehold.co/700x480/eeeeee/999999?text=Photo" alt="">
+                                            <img src="https://placehold.co/700x480/eeeeee/999999?text=Photo" alt="">
                                         <?php } ?>
                                     </a>
                                 </div>
@@ -116,12 +116,12 @@ if ( ! function_exists( 'abc_render_province_panel' ) ) {
                     <?php if ( ! empty( $rest ) ) : ?>
                         <ul class="nyt-province-list">
                             <?php foreach ( $rest as $rp ) : $rp_id = $rp->ID; ?>
-                                ="nyt-province-list-item">
-                                    ="nyt-province-list-media" href="<?php echo esc_url( get_permalink( $rp_id ) ); ?>">
+                                <li class="nyt-province-list-item">
+                                    <a class="nyt-province-list-media" href="<?php echo esc_url( get_permalink( $rp_id ) ); ?>">
                                         <?php if ( has_post_thumbnail( $rp_id ) ) {
                                             echo get_the_post_thumbnail( $rp_id, 'thumbnail' );
                                         } else { ?>
-                                            ="https://placehold.co/120x90/eeeeee/999999?text=+" alt="">
+                                            <img src="https://placehold.co/120x90/eeeeee/999999?text=+" alt="">
                                         <?php } ?>
                                     </a>
                                     <div class="nyt-province-list-text">
