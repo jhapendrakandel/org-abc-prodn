@@ -1070,3 +1070,14 @@ add_action( 'admin_init', 'abcnt_handle_clear_breaking' );
    require_once at the top of this file. Do not redeclare those
    functions here — it will cause a fatal "Cannot redeclare" error.
 ══════════════════════════════════════════════════════ */
+
+function abcnt_route_abc_video_single( $template ) {
+    if ( is_singular( 'post' ) && has_category( 'abc-video' ) ) {
+        $custom = locate_template( 'single-abc-videos.php' );
+        if ( ! empty( $custom ) ) {
+            return $custom;
+        }
+    }
+    return $template;
+}
+add_filter( 'single_template', 'abcnt_route_abc_video_single' );
